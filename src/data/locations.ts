@@ -69,14 +69,6 @@ export const samuiHospitals: Hospital[] = [
     jsonFile: "Bangkok Hospital Samui_5589cfc7.json",
     accreditations: ["JCI Accredited"],
   },
-  {
-    id: "samui-clinic",
-    name: "Samui Clinic (Bandon Hospital)",
-    slug: "samui-clinic",
-    location: "samui",
-    shortDescription: "Boutique cosmetic surgery on Koh Samui",
-    jsonFile: "Samui Clinic - Samui Hospital - Bandon Hospital_a7d363dc.json",
-  },
 ];
 
 export const pattayaHospitals: Hospital[] = [
