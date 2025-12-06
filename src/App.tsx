@@ -17,6 +17,7 @@ import AboutPage from "./pages/AboutPage";
 import PricingPage from "./pages/PricingPage";
 import BeforeAfterPage from "./pages/BeforeAfterPage";
 import SurgeonsPage from "./pages/SurgeonsPage";
+import ScrollToTop from "./components/utils/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <ScrollToTop />
           <Routes>
             <Route path="/" element={<Index />} />
             
