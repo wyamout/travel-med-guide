@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -103,36 +103,18 @@ const Footer = () => {
             <h4 className="text-xs tracking-widest uppercase mb-6 text-primary-foreground/80">
               Contact
             </h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-accent mt-1 shrink-0" />
-                <div>
-                  <p className="text-primary-foreground/50 text-xs mb-1">Thailand</p>
-                  <a 
-                    href="tel:+6626533880" 
-                    className="text-primary-foreground hover:text-accent transition-colors text-sm"
-                  >
-                    +66 2 653 3880
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-accent mt-1 shrink-0" />
+            <div className="flex items-start gap-3">
+              <Phone className="w-4 h-4 text-accent mt-1 shrink-0" />
+              <div>
+                <p className="text-primary-foreground/50 text-xs mb-1">Thailand</p>
                 <a 
-                  href="mailto:inquire@cosmeticsurgerythailand.com" 
-                  className="text-primary-foreground hover:text-accent transition-colors text-sm break-all"
+                  href="tel:+66925590848" 
+                  className="text-primary-foreground hover:text-accent transition-colors text-sm"
                 >
-                  inquire@cosmeticsurgerythailand.com
+                  +66 92 559 0848
                 </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-accent mt-1 shrink-0" />
-                <p className="text-primary-foreground/60 text-sm font-light">
-                  One Pacific Place, Unit 1708,<br />
-                  140 Sukhumvit Rd., Bangkok
-                </p>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -141,7 +123,7 @@ const Footer = () => {
       <div className="border-t border-primary-foreground/10">
         <div className="container py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-primary-foreground/40 text-xs tracking-wider">
-            © 2024 Cosmetic Surgery Thailand. All rights reserved.
+            © {new Date().getFullYear()} Cosmetic Surgery Thailand. All rights reserved.
           </p>
           <div className="flex items-center gap-8 text-xs tracking-wider">
             <Link 

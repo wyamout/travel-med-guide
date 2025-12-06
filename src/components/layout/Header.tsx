@@ -39,12 +39,12 @@ const Header = () => {
         <div className="container flex items-center justify-between">
           <div className="flex items-center gap-8">
             <a
-              href="tel:+6626533880"
+              href="tel:+66925590848"
               className="flex items-center gap-2 hover:text-accent transition-colors duration-300"
             >
               <Phone className="w-3.5 h-3.5" />
               <span className="text-xs tracking-widest font-light">
-                +66 2 653 3880
+                +66 92 559 0848
               </span>
             </a>
           </div>
