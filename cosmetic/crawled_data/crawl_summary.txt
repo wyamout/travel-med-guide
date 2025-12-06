@@ -1,0 +1,770 @@
+Website Crawl Summary
+==================================================
+
+Base URL: http://cosmeticsurgerythailand.com
+Total Pages: 164
+Total Images: 841
+
+Pages Crawled:
+--------------------------------------------------
+
+URL: http://cosmeticsurgerythailand.com
+Title: Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Would you like to get free consultation?, Beauty MED Team
+Images: 16
+
+URL: https://cosmeticsurgerythailand.com
+Title: Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Would you like to get free consultation?, Beauty MED Team
+Images: 16
+
+URL: https://cosmeticsurgerythailand.com/face/alarplasty-thailand.html
+Title: Alarplasty Thailand- Bangkok and Samui
+H1: Alarplasty
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/face/cheek-reduction-thailand.html
+Title: Cheek Reduction Thailand - Bangkok and Samui
+H1: Cheek Reduction
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/face/chin-augmentation-thailand.html
+Title: Chin Augmentation Thailand - Bangkok and Samui
+H1: Chin Augmentation
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/face/chin-shaving-thailand.html
+Title: Chin Shaving Thailand - Bangkok and Samui
+H1: Chin Shaving
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/face/forehead-lift-thailand.html
+Title: Forehead Lift in Thailand - Bangkok and Samui
+H1: Forehead Lift
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/face/full-facelift-thailand.html
+Title: Full Face Lift in Thailand - Bangkok and Samui
+H1: Full Face Lift
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/face/mini-facelift-thailand.html
+Title: Mini FaceLift - Facelifting in Thailand - Bangkok and Samui
+H1: Mini FaceLift
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/face/nose-implant-thailand.html
+Title: Nose Implant Thailand - Bangkok and Samui
+H1: Nose Implants
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/face/tip-rhinoplasty-thailand.html
+Title: Tip Rhinoplasty Thailand - Bangkok and Samui
+H1: Tip Rhinoplasty
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/face/nose-surgery-thailand.html
+Title: Nose Surgery Thailand - Bangkok and Samui
+H1: Nose Surgery
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/face/upper-eyelid-thailand.html
+Title: Upper Eyelid Surgery Thailand - Bangkok and Samui
+H1: Upper Eyelid Surgery
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/face/lower-eyelid-thailand.html
+Title: Lower Eyelid Surgery in Thailand - Bangkok and Samui
+H1: Lower Eyelid Surgery
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/breast/breast-implants-thailand.html
+Title: Breast Implants Thailand - Bangkok and Samui
+H1: Breast Implants
+Images: 9
+
+URL: https://cosmeticsurgerythailand.com/breast/breast-lifts-thailand.html
+Title: Breast Lift Thailand - Bangkok and Samui
+H1: Breast Lift
+Images: 9
+
+URL: https://cosmeticsurgerythailand.com/breast/breast-reductions-thailand.html
+Title: Breast Reduction Thailand- Bangkok and Samui
+H1: Breast Reduction
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/body/buttock-lift-thailand.html
+Title: Buttock Lift Thailand - Bangkok and Samui
+H1: Buttock Lift
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/body/buttocks-implant-thailand.html
+Title: Buttocks Implant in Thailand - Bangkok and Samui
+H1: Buttocks Implants
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/body/liposuction-in-thailand.html
+Title: Liposuction in Thailand - Bangkok and Samui
+H1: Liposuction
+Images: 9
+
+URL: https://cosmeticsurgerythailand.com/body/lipoplasty-in-thailand.html
+Title: Lipoplasty in Thailand - Bangkok and Samui
+H1: Lipoplasty
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/body/tummytuck-thailand.html
+Title: Tummy Tuck Thailand - Bangkok and Samui
+H1: Tummy Tuck
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/vaser-hi-def-thailand.html
+Title: Vaser Hi Def in Thailand - Vaser High Definition
+H1: Vaser Hi Def in Thailand – Vaser High Definition
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/vaser-in-thailand.html
+Title: Vaser in Thailand - Vaser Liposelection
+H1: Vaser in Thailand – Vaser Liposelection
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/srs/mtf-thailand.html
+Title: Male to Female Thailand - MTF Thailand
+H1: Male to Female Thailand – MTF Thailand
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/srs/ftm-thailand.html
+Title: Female to Male Thailand - FTM Thailand
+H1: Female to Male Thailand – FTM Thailand
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/body/hair-transplants-thailand.html
+Title: Hair Transplants in Thailand - Bangkok and Samui
+H1: Hair Transplants
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/hospitals-thailand.html
+Title: Hospitals in Thailand for Cosmetic Surgery
+H1: Hospitals
+Images: 13
+
+URL: https://cosmeticsurgerythailand.com/contact.html
+Title: Medical Questionnaire
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/srs/srs-thailand.html
+Title: Sex Change Thailand - Bangkok and Samui
+H1: Sex Change Thailand
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/bangkok/yanhee-international-hospital.html
+Title: Yanhee International Hospital
+H1: Yanhee International Hospital
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/bangkok/pai-clinic.html
+Title: Preecha's Aesthetic Institute - Cosmetic Surgery Clinic in Thailand
+H1: Preecha’s Aesthetic Institute – Cosmetic Surgery Clinic in Thailand
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/bangkok/naravee-clinic-thailand.html
+Title: Naravee Clinic Thailand
+H1: Naravee Cosmetic Hospital
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/bangkok/mtf-kamol-center.html
+Title: Kamol Cosmetic Hospital
+H1: Kamol Cosmetic Hospital
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/bangkok/bangpakok-international-hospital.html
+Title: Bangpakok 9 International Hospital
+H1: Bangpakok 9 International Hospital
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/phuket/phuket-hospital.html
+Title: Phuket Hospital
+H1: Phuket Hospital
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/samui/samui-bangkok-hospital.html
+Title: Bangkok Hospital Samui
+H1: Samui Clinic – Samui Hospital – Bangkok Hospital
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/body/calf-implants-thailand.html
+Title: cosmeticsurgerythailand.com
+H1: Thiscosmeticsurgerythailand.compage can’t be found
+Images: 0
+
+URL: https://cosmeticsurgerythailand.com/pattaya/bangkok-hospital-pattaya.html
+Title: Bangkok Hospital Pattaya - Pattaya International Hospital
+H1: Bangkok Hospital Pattaya – Pattaya International Hospital
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/huahin/san-paulo-hospital.html
+Title: San Paulo Hospital Hua Hin
+H1: San Paulo Hospital
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/about.html
+Title: Thailand Cosmetic Surgery Testimonials
+H1: About Cosmetic Surgery Thailand
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/surgery-payment-facilities.html
+Title: Surgery Payment Facilities for Australians - Cosmetic Surgery Thailand
+Images: 7
+
+URL: https://cosmeticsurgerythailand.com/privacy.html
+Title: Privacy Policy - Cosmetic Surgery Thailand
+H1: Privacy Policy – Cosmetic Surgery Thailand
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/sitemap.html
+Title: Sitemap
+H1: Sitemap
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/bangkok/cosmetic-surgeons-yanhee.html
+Title: Cosmetic Surgeons Yanhee Hospital
+H1: Cosmetic Surgeons Yanhee Hospital
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/yanhee.jpg
+Title: yanhee.jpg (255×176)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/bangkok/cosmetic-surgeons-pai.html
+Title: Cosmetic Surgeons PAI
+H1: Cosmetic Surgeons PAI
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/pai_clinics13.jpg
+Title: pai_clinics13.jpg (188×320)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/bangkok/naravee-surgeons-thailand.html
+Title: Naravee Clinic Surgeons
+H1: Naravee Clinic Surgeons
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/bangkok/kamol-mtf-surgeons.html
+Title: Dr. MTF surgery hospital
+H1: MTF Dr. Kamol Surgeons
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/bangkok9img.jpg
+Title: bangkok9img.jpg (320×274)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/Phuket-Hospital.jpg
+Title: Phuket-Hospital.jpg (448×299)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/samui/cosmetic-surgeon-samui.html
+Title: Cosmetic Surgeon Bangkok Hospital Samui
+H1: Cosmetic Surgeon Bangkok Hospital Samui
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/bangkok-hospital-samui.jpg
+Title: bangkok-hospital-samui.jpg (240×156)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/bangkok-hospital-pattaya.jpg
+Title: bangkok-hospital-pattaya.jpg (240×180)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/san-paulo.gif
+Title: san-paulo.gif (300×450)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/10058-2
+Title: - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: 5 Tips on How to Write a Solid Essay
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/bangkok/before-after-pai.html
+Title: Before & After PAI
+H1: Before & After PAI
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/before-after.html
+Title: Before & After Pictures for Cosmetic Surgeries in Thailand
+H1: Before/After
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/bangkok/before-after-yanhee.html
+Title: Before & After Yanhee Hospital
+H1: Before & After Yanhee Hospital
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/phuket/phuket-before-after.html
+Title: Before and After picture Phuket Hospital - PIAC
+H1: Before and After picture Phuket Hospital – PIAC
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/pattaya/before-after-pattaya.html
+Title: Before and After pictures at Bangkok Hospital Pattay
+H1: Before and After pictures at Bangkok Hospital Pattay
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/samui/before-after-bangkok-hospital.html
+Title: Before and After Pictures
+H1: Before and After Pictures
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/samui/before-after-samui.html
+Title: Before and After Samui Clinic
+H1: Before and After Samui Clinic
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/body/body-contouring-procedures.html
+Title: Body Contouring Procedures
+H1: Body Contouring Procedures
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/body/body-surgeries-thailand.html
+Title: Body Surgeries - Cosmetic Surgery Thailand
+H1: Body Surgeries – Cosmetic Surgery Thailand
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/booking.html
+Title: Booking - Cosmetic Surgery in Thailand
+H1: Booking – Cosmetic Surgery in Thailand
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/breast/breast-surgeries-thailand.html
+Title: Breast Surgery Thailand - Bangkok and Samui
+H1: Breast Surgery Thailand
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/plastic-surgeon-thailand.html
+Title: Cosmetic Surgeons Thailand - Cosmetic Surgeons
+H1: Cosmetic Surgeons
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/pattaya/cosmetic-surgeons-pattaya.html
+Title: Cosmetic Surgeons at Bangkok Hospital Pattaya
+H1: Cosmetic Surgeons at Bangkok Hospital Pattaya
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/phuket/phuket-cosmetic-surgeons.html
+Title: Cosmetic Surgeons at Phuket Hospital Aesthetic Center
+H1: Cosmetic Surgeons at Phuket Hospital Aesthetic Center
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/faq.html
+Title: FAQs
+H1: Cosmetic Surgery FAQs
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/pattaya/cosmetic-surgery-pattaya.html
+Title: Hospital in Pattaya
+H1: Cosmetic Surgery Hospitals in Pattaya
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/bangkok/cosmetic-surgery-bangkok.html
+Title: Cosmetic Surgery Bangkok
+H1: Cosmetic Surgery in Bangkok
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/huahin/cosmetic-surgery-huahin.html
+Title: Cosmetic Surgery in Hua Hin
+H1: Cosmetic Surgery in Hua Hin
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/phuket/cosmetic-surgery-phuket.html
+Title: Cosmetic Surgery in Phuket
+H1: Cosmetic Surgery in Phuket
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/cosmetic-surgery-packages.html
+Title: Cosmetic Surgery Packages Thailand
+H1: Cosmetic Surgery Packages Thailand
+Images: 15
+
+URL: https://cosmeticsurgerythailand.com/samui/bandon-hospital-prices.html
+Title: Cosmetic Surgery Prices at Bandon Hospital - Samui Clinic
+H1: Cosmetic Surgery Prices at Bandon Hospital
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/samui/bangkok-hospital-prices.html
+Title: Cosmetic Surgery Prices at Bangkok Hospital Samui
+H1: Cosmetic Surgery Prices at Bangkok Hospital Samui
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/surgery-prices-thailand.html
+Title: Cosmetic Surgery Prices in Thailand
+H1: Cosmetic Surgery Prices in Thailand
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/bangkok/pai-prices.html
+Title: Cosmetic Surgery Prices Thailand | Cost for Cosmetic Surgery in Thailand - Bangkok and Samui
+H1: Cosmetic Surgery Prices Thailand | Cost for Cosmetic Surgery in Thailand
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/surgery-thailand.html
+Title: Cosmetic Surgery Thailand - World Class Plastic Surgery in Thailand
+H1: Cosmetic Surgery Thailand – World Class Plastic Surgery Clinic in Thailand Offer Safe & Affordable Surgical Services.
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/face/face-surgery-thailand.html
+Title: Facial Surgeries Thailand - Bangkok and Samui
+H1: Facial Surgeries Thailand – Bangkok and Samui
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/flights-thailand.html
+Title: Flights to Thailand
+H1: Flights to Thailand
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/samui/cosmetic-surgery-samui.html
+Title: Cosmetic Surgery Samui
+H1: Hospitals in Samui
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/hotels-thailand.html
+Title: Hotels Thailand Near Cosmetic Surgery Hospital
+H1: Hotels Thailand Near Cosmetic Surgery Hospital
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/bangkok/pai-hospitals.html
+Title: International Hospital Thailand for Cosmetic Surgery
+H1: International Hospital Thailand for Cosmetic Surgery
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/bangkok/mtf-before-after.html
+Title: MTF Hospital Before and After
+H1: Kamol Cosmetic Hospital Before & After
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/bangkok/kamol-mtf-prices.html
+Title: MTF surgery hospital Prices
+H1: MTF Dr. Kamol Surgery Prices
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/bangkok/naravee-before-after.html
+Title: Naravee Clinic Before & After
+H1: Naravee Clinic Before & After
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/bangkok/naravee-prices-thailand.html
+Title: Naravee Clinic Prices
+H1: Naravee Clinic Prices
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/phuket/phuket-aesthetic-prices.html
+Title: Phuket Aesthetic Prices
+H1: Phuket Aesthetic Prices
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/pattaya/hospital-prices-pattaya.html
+Title: Plastic Surgery Prices at Pattaya International Hospital
+H1: Plastic Surgery Prices at Pattaya International Hospital
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/popup
+Title: popup - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: popup
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/procedures.html
+Title: Medical Procedures
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/samui/samui-clinic-hospital.html
+Title: Samui Clinic - Samui Hospital - Bandon Hospital
+H1: Samui Clinic – Samui Hospital – Bandon Hospital
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/huahin/san-paulo-pictures.html
+Title: San Paulo Hospital Before & After Pictures
+H1: San Paulo Hospital Before & After Pictures
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/huahin/san-paulo-surgeons.html
+Title: San Paulo Hospital Surgeons
+H1: San Paulo Hospital Surgeons
+Images: 15
+
+URL: https://cosmeticsurgerythailand.com/huahin/san-paulo-prices.html
+Title: San Paulo Hospital Surgery Prices
+H1: San Paulo Hospital Surgery Prices
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/term-paper-writing-services
+Title: Term Paper Writing Services - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Term Paper Writing Services
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/thank-you.html
+Title: Thank You - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+Images: 2
+
+URL: https://cosmeticsurgerythailand.com/body/tummy-procedures.html
+Title: Tummy Procedures
+H1: Tummy Procedures
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/bangkok/yanhee-hospital-prices.html
+Title: Yanhee Hospital Prices
+H1: Yanhee Hospital Prices
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/Dr.Preechas-surgeon.jpg
+Title: Dr.Preechas-surgeon.jpg (512×768)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/Dr.Apichais-surgeon.jpg
+Title: Dr.Apichais-surgeon.jpg (512×768)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/Dr.Burins-surgeon.jpg
+Title: Dr.Burins-surgeon.jpg (512×768)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/Dr.Prayuth-surgeon.jpg
+Title: Dr.Prayuth-surgeon.jpg (512×768)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/Dr.Praphats-surgeon.jpg
+Title: Dr.Praphats-surgeon.jpg (512×768)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/Dr_Ronnachai1.png
+Title: Dr_Ronnachai1.png (257×375)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/dr-kamon-pansritum.jpg
+Title: dr-kamon-pansritum.jpg (548×442)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/DrSanguan.jpg
+Title: DrSanguan.jpg (100×119)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/DrVeerawat.jpg
+Title: DrVeerawat.jpg (100×119)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/DrSongyos.jpg
+Title: DrSongyos.jpg (100×119)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/DrThanakom-1.jpg
+Title: DrThanakom-1.jpg (150×180)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/DrRushaplo.jpg
+Title: DrRushaplo.jpg (100×119)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/breast-augmentation
+Title: Breast Augmentation - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+Images: 13
+
+URL: https://cosmeticsurgerythailand.com/portfolio_category/bangkok
+Title: Bangkok Archives - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Archives
+Images: 15
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/breast-augmentation-2
+Title: Breast Augmentation - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/portfolio_category/phuket
+Title: Phuket Archives - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Archives
+Images: 11
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/breast-lift-breast-implants
+Title: Breast Lift + Breast Implants - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+Images: 13
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/breast-lift-breast-implants-2
+Title: Breast Lift + Breast Implants - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/breast-lift-breast-implants-tummy-tuck
+Title: Breast Lift + Breast Implants + Tummy Tuck - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+Images: 13
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/breast-lift-breast-implants-tummy-tuck-2
+Title: Breast Lift + Breast Implants + Tummy Tuck - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/mid-face-lift-neck-lift
+Title: Mid-Face Lift + Neck Lift - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+Images: 13
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/mid-face-lift-neck-lift-2
+Title: Mid-Face Lift + Neck Lift - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/tummy-tuck
+Title: Tummy Tuck - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/tummy-tuck-2
+Title: Tummy Tuck - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+Images: 13
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/deluxe1.jpg
+Title: deluxe1.jpg (650×433)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/deluxe3.jpg
+Title: deluxe3.jpg (650×433)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/beyond_suite2.jpg
+Title: beyond_suite2.jpg (650×433)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/facil2.jpg
+Title: facil2.jpg (650×433)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/facil3.jpg
+Title: facil3.jpg (650×433)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/beyond_suite1.jpg
+Title: beyond_suite1.jpg (650×433)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/facil4.jpg
+Title: facil4.jpg (650×433)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/exterior2.jpg
+Title: exterior2.jpg (650×433)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/breast-yanhee_mini-390x390.jpg
+Title: breast-yanhee_mini-390x390.jpg (390×390)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/iStock_000003736639Medium_miniv.jpg
+Title: iStock_000003736639Medium_miniv.jpg (586×390)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/hsg-4v.jpg
+Title: hsg-4v.jpg (600×390)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/OJ008-090v.jpg
+Title: OJ008-090v.jpg (585×390)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/breast-Tummy-Tuck-phuket-2_mini-390x390.jpg
+Title: breast-Tummy-Tuck-phuket-2_mini-390x390.jpg (390×390)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/featured-yanhee_mini.jpg
+Title: featured-yanhee_mini.jpg (271×361)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/featured-kamol_mini.jpg
+Title: featured-kamol_mini.jpg (271×361)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/featured-naravee_mini.jpg
+Title: featured-naravee_mini.jpg (271×361)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/featured-pai_mini.jpg
+Title: featured-pai_mini.jpg (271×361)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/bangkok/samitivej-hospital-thailand.html
+Title: cosmeticsurgerythailand.com
+H1: Thiscosmeticsurgerythailand.compage can’t be found
+Images: 0
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/featured-samitivej_mini1.jpg
+Title: featured-samitivej_mini1.jpg (271×361)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/portfolio_category/bangkok/page/2
+Title: Bangkok Archives - Page 2 of 2 - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Archives
+Images: 6
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/breast-phuket_mini-390x390.jpg
+Title: breast-phuket_mini-390x390.jpg (390×390)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/breast-lift-yanhee_mini-390x390.jpg
+Title: breast-lift-yanhee_mini-390x390.jpg (390×390)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/122505468v.jpg
+Title: 122505468v.jpg (585×390)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/hsg-2sa.jpg
+Title: hsg-2sa.jpg (522×390)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/Fotolia_3351015_Subscription_XLv.jpg
+Title: Fotolia_3351015_Subscription_XLv.jpg (587×390)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/featured-phuket_mini.jpg
+Title: featured-phuket_mini.jpg (271×361)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/yanhee-international
+Title: Yanhee International - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Yanhee International
+Images: 10
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/featured-bangpakok_mini.jpg
+Title: featured-bangpakok_mini.jpg (271×361)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/dr-kamol-hospital
+Title: Dr. Kamol Hospital - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Dr. Kamol Hospital
+Images: 10
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/naravee-aesthetic-center
+Title: Naravee Aesthetic Center - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Naravee Aesthetic Center
+Images: 10
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/preecha-aesthetic-institute
+Title: Preecha Aesthetic Institute - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Preecha Aesthetic Institute
+Images: 10
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/san-paulo
+Title: San Paulo - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: San Paulo
+Images: 5
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/bangkok-international
+Title: Bangkok International - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Bangkok International
+Images: 10
+
+URL: https://cosmeticsurgerythailand.com/wp-content/uploads/2015/05/featured-bkk-pattaya_mini.jpg
+Title: featured-bkk-pattaya_mini.jpg (271×361)
+Images: 1
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/phuket-international
+Title: Phuket International - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Phuket International
+Images: 10
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/samitivej
+Title: Samitivej - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Samitivej
+Images: 10
+
+URL: https://cosmeticsurgerythailand.com/portfolio-posts/bangpakok-9
+Title: Bangpakok 9 - Cosmetic Surgery Thailand - Bangkok, Samui Clinic, Phuket and Pattaya
+H1: Bangpakok 9
+Images: 5
