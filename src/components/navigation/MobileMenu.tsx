@@ -147,18 +147,18 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
 
         {/* Simple Links */}
         <Link
-          to="/before-after"
-          onClick={onClose}
-          className="py-4 px-4 text-foreground/80 hover:text-foreground text-sm tracking-wider uppercase font-medium transition-colors border-b border-border/30"
-        >
-          Before & After
-        </Link>
-        <Link
           to="/surgeons"
           onClick={onClose}
           className="py-4 px-4 text-foreground/80 hover:text-foreground text-sm tracking-wider uppercase font-medium transition-colors border-b border-border/30"
         >
           Surgeons
+        </Link>
+        <Link
+          to="/prices"
+          onClick={onClose}
+          className="py-4 px-4 text-foreground/80 hover:text-foreground text-sm tracking-wider uppercase font-medium transition-colors border-b border-border/30"
+        >
+          Prices
         </Link>
         <Link
           to="/about"

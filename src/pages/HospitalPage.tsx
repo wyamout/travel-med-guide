@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import PageLayout from "@/components/layout/PageLayout";
 import { getHospitalBySlug } from "@/data/locations";
+import { getHospitalContent } from "@/utils/hospitalContentLoader";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -17,6 +18,7 @@ import { Link } from "react-router-dom";
 const HospitalPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const hospital = slug ? getHospitalBySlug(slug) : null;
+  const content = slug ? getHospitalContent(slug) : null;
 
   if (!hospital) {
     return (
@@ -37,7 +39,7 @@ const HospitalPage = () => {
     );
   }
 
-  const locationLabels = {
+  const locationLabels: Record<string, string> = {
     bangkok: "Bangkok",
     phuket: "Phuket",
     samui: "Koh Samui",
@@ -47,8 +49,8 @@ const HospitalPage = () => {
 
   return (
     <PageLayout
-      title={`${hospital.name} | Cosmetic Surgery Thailand`}
-      description={`${hospital.shortDescription} Expert cosmetic surgeons in ${locationLabels[hospital.location]}. Free consultation available.`}
+      title={content?.metaTitle || `${hospital.name} | Cosmetic Surgery Thailand`}
+      description={content?.metaDescription || `${hospital.shortDescription} Expert cosmetic surgeons in ${locationLabels[hospital.location]}. Free consultation available.`}
       keywords={`${hospital.name.toLowerCase()}, cosmetic surgery ${hospital.location}, plastic surgery ${hospital.location}`}
       canonicalUrl={`https://cosmeticsurgerythailand.com/${hospital.location}/${hospital.slug}`}
     >
@@ -57,7 +59,7 @@ const HospitalPage = () => {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 flex-wrap">
                 <Badge variant="secondary" className="text-sm">
                   <MapPin className="w-3 h-3 mr-1" />
                   {locationLabels[hospital.location]}
@@ -71,7 +73,7 @@ const HospitalPage = () => {
               </div>
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-                {hospital.name}
+                {content?.h1Title || hospital.name}
               </h1>
 
               <p className="text-xl text-muted-foreground max-w-xl">
@@ -79,14 +81,18 @@ const HospitalPage = () => {
               </p>
 
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="cta-button">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Free Consultation
-                </Button>
-                <Button size="lg" variant="outline">
-                  View Surgeons
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
+                <Link to="/contact">
+                  <Button size="lg" className="cta-button">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Free Consultation
+                  </Button>
+                </Link>
+                <Link to="/surgeons">
+                  <Button size="lg" variant="outline">
+                    View Surgeons
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </Link>
               </div>
 
               {/* Trust Signals */}
@@ -102,18 +108,48 @@ const HospitalPage = () => {
               </div>
             </div>
 
-            {/* Image placeholder */}
+            {/* Hospital Image */}
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <Shield className="w-20 h-20 mx-auto mb-4 text-primary/50" />
-                  <p className="text-muted-foreground">{hospital.name}</p>
+              {content?.image ? (
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={content.image} 
+                    alt={hospital.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </div>
+              ) : (
+                <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
+                  <div className="text-center p-8">
+                    <Shield className="w-20 h-20 mx-auto mb-4 text-primary/50" />
+                    <p className="text-muted-foreground">{hospital.name}</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </section>
+
+      {/* Content Section */}
+      {content?.paragraphs && content.paragraphs.length > 0 && (
+        <section className="py-16 md:py-24">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="section-title mb-8">
+                About {hospital.name}
+              </h2>
+              <div className="prose prose-lg max-w-none">
+                {content.paragraphs.map((paragraph, index) => (
+                  <p key={index} className="text-muted-foreground leading-relaxed mb-4">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Features Section */}
       <section className="py-16 md:py-24 bg-card">
@@ -156,17 +192,21 @@ const HospitalPage = () => {
             help you plan every detail.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" variant="secondary">
-              <Phone className="w-5 h-5 mr-2" />
-              Contact Hospital
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-            >
-              View Prices
-            </Button>
+            <Link to="/contact">
+              <Button size="lg" variant="secondary">
+                <Phone className="w-5 h-5 mr-2" />
+                Free Consultation
+              </Button>
+            </Link>
+            <Link to="/prices">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              >
+                View Prices
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

@@ -73,14 +73,11 @@ export const mainPageRoutes: RouteConfig[] = [
   { path: "/breast", title: "Breast Surgery Thailand", component: "CategoryPage" },
   { path: "/body", title: "Body Surgery Thailand", component: "CategoryPage" },
   { path: "/srs", title: "Gender Surgery Thailand", component: "CategoryPage" },
-  { path: "/before-after", title: "Before & After Gallery", component: "BeforeAfterPage" },
   { path: "/surgeons", title: "Cosmetic Surgeons Thailand", component: "SurgeonsPage" },
   { path: "/prices", title: "Cosmetic Surgery Prices Thailand", component: "PricingPage" },
   { path: "/about", title: "About Us - Testimonials", component: "AboutPage" },
   { path: "/contact", title: "Contact - Free Consultation", component: "ContactPage" },
-  { path: "/booking", title: "Book Your Surgery", component: "BookingPage" },
   { path: "/faq", title: "Frequently Asked Questions", component: "FAQPage" },
-  { path: "/privacy", title: "Privacy Policy", component: "PrivacyPage" },
 ];
 
 // All routes combined

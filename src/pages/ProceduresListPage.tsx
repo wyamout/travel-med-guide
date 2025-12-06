@@ -6,7 +6,6 @@ import {
   otherProcedures 
 } from "@/data/procedures";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
 
 const ProceduresListPage = () => {
   const categories = [
@@ -63,22 +62,13 @@ const ProceduresListPage = () => {
         <div className="container space-y-16">
           {categories.map((category) => (
             <div key={category.slug}>
-              <div className="flex items-center justify-between mb-8">
-                <div>
-                  <h2 className="text-2xl md:text-3xl font-bold">
-                    {category.title}
-                  </h2>
-                  <p className="text-muted-foreground mt-1">
-                    {category.description}
-                  </p>
-                </div>
-                <Link
-                  to={`/${category.slug}`}
-                  className="hidden md:flex items-center gap-2 text-primary font-medium hover:underline"
-                >
-                  View all
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
+              <div className="mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold">
+                  {category.title}
+                </h2>
+                <p className="text-muted-foreground mt-1">
+                  {category.description}
+                </p>
               </div>
 
               <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">

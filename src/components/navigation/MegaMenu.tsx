@@ -201,11 +201,11 @@ const MegaMenu = () => {
       </div>
 
       {/* Simple Links */}
-      <Link to="/before-after" className="nav-link py-2">
-        Before & After
-      </Link>
       <Link to="/surgeons" className="nav-link py-2">
         Surgeons
+      </Link>
+      <Link to="/prices" className="nav-link py-2">
+        Prices
       </Link>
       <Link to="/about" className="nav-link py-2">
         About
