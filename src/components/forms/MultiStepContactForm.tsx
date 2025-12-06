@@ -179,6 +179,8 @@ const initialFormData: FormData = {
   desiredIncision: "",
 };
 
+const breastProcedures = ["Breast Implants", "Breast Lift", "Breast Reduction"];
+
 const MultiStepContactForm = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState<FormData>(initialFormData);
@@ -189,7 +191,8 @@ const MultiStepContactForm = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
   
-  const totalSteps = 6;
+  const isBreastSurgery = breastProcedures.includes(formData.procedure);
+  const totalSteps = isBreastSurgery ? 6 : 5;
   const progress = (step / totalSteps) * 100;
 
   const updateField = (field: keyof FormData, value: string | boolean) => {
@@ -400,8 +403,8 @@ const MultiStepContactForm = () => {
           {step === 2 && "Surgery Details"}
           {step === 3 && "Medical Conditions"}
           {step === 4 && "For Women & Medical History"}
-          {step === 5 && "Lifestyle & Medications"}
-          {step === 6 && "Breast Surgery Details"}
+          {step === 5 && (isBreastSurgery ? "Lifestyle & Medications" : "Final Details & Photos")}
+          {step === 6 && isBreastSurgery && "Breast Surgery Details"}
         </h2>
       </div>
 
@@ -1005,10 +1008,73 @@ const MultiStepContactForm = () => {
                 />
               </div>
             )}
+
+            {/* Photo Upload for non-breast surgery - final step */}
+            {!isBreastSurgery && (
+              <>
+                <SectionHeader>Upload Photos (Optional)</SectionHeader>
+                
+                <div className="space-y-3">
+                  <p className="text-sm text-muted-foreground">
+                    Upload photos of the area(s) you wish to have treated. This helps our surgeons provide more accurate feedback.
+                    Maximum 5 images, 10MB each.
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-3">
+                    {uploadedImages.map((file, index) => (
+                      <div key={index} className="relative w-20 h-20 border border-border rounded overflow-hidden">
+                        <img 
+                          src={URL.createObjectURL(file)} 
+                          alt={`Upload ${index + 1}`}
+                          className="w-full h-full object-cover"
+                        />
+                        <button
+                          type="button"
+                          onClick={() => removeImage(index)}
+                          className="absolute top-0 right-0 bg-destructive text-destructive-foreground p-0.5 rounded-bl"
+                        >
+                          <X className="w-3 h-3" />
+                        </button>
+                      </div>
+                    ))}
+                    
+                    {uploadedImages.length < 5 && (
+                      <button
+                        type="button"
+                        onClick={() => fileInputRef.current?.click()}
+                        className="w-20 h-20 border-2 border-dashed border-border rounded flex flex-col items-center justify-center text-muted-foreground hover:border-accent hover:text-accent transition-colors"
+                      >
+                        <Upload className="w-5 h-5 mb-1" />
+                        <span className="text-xs">Add</span>
+                      </button>
+                    )}
+                  </div>
+                  
+                  <input
+                    ref={fileInputRef}
+                    type="file"
+                    accept="image/*"
+                    multiple
+                    onChange={handleImageUpload}
+                    className="hidden"
+                  />
+                </div>
+
+                <div className="bg-muted/50 p-4 rounded-sm text-sm text-muted-foreground mt-4">
+                  <p className="font-medium text-foreground mb-2">What happens next?</p>
+                  <ul className="space-y-1">
+                    <li>• Our team will review your information within 24 hours</li>
+                    <li>• A surgeon will provide personalized feedback</li>
+                    <li>• We will help you choose the best hospital and surgeon</li>
+                    <li>• Our service is completely free - you pay the hospital directly</li>
+                  </ul>
+                </div>
+              </>
+            )}
           </>
         )}
 
-        {step === 6 && (
+        {step === 6 && isBreastSurgery && (
           <>
             <SectionHeader>Breast Surgery Details</SectionHeader>
             
