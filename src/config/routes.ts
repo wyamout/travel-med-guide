@@ -66,8 +66,6 @@ export const hospitalRoutes: RouteConfig[] = [
   { path: "/samui", title: "Cosmetic Surgery Koh Samui", component: "LocationPage" },
   { path: "/samui/bangkok-hospital-samui", title: "Bangkok Hospital Samui", component: "HospitalPage" },
   { path: "/samui/bangkok-hospital-samui/surgeons", title: "Bangkok Hospital Samui Surgeons", component: "HospitalSurgeonsPage" },
-  { path: "/samui/samui-clinic", title: "Samui Clinic", component: "HospitalPage" },
-  { path: "/samui/samui-clinic/surgeons", title: "Samui Clinic Surgeons", component: "HospitalSurgeonsPage" },
   { path: "/pattaya", title: "Cosmetic Surgery Pattaya", component: "LocationPage" },
   { path: "/pattaya/bangkok-hospital-pattaya", title: "Bangkok Hospital Pattaya", component: "HospitalPage" },
   { path: "/pattaya/bangkok-hospital-pattaya/surgeons", title: "Bangkok Hospital Pattaya Surgeons", component: "HospitalSurgeonsPage" },

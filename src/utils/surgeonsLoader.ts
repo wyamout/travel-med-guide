@@ -405,27 +405,6 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       }
     ]
   },
-  "samui-clinic": {
-    hospitalName: "Samui Clinic (Bandon Hospital)",
-    hospitalSlug: "samui-clinic",
-    metaTitle: "Samui Clinic Surgeons | Koh Samui Cosmetic Surgeons 2025",
-    metaDescription: "Meet the cosmetic surgeons at Samui Clinic. Boutique cosmetic surgery on Koh Samui. Free consultation.",
-    introduction: "Samui Clinic at Bandon Hospital provides personalized cosmetic surgery with experienced surgeons on Koh Samui.",
-    surgeons: [
-      {
-        name: "Samui Clinic Surgeons",
-        fullName: "Board Certified Plastic Surgeons",
-        image: null,
-        specialties: "Facial Surgery, Breast Surgery, Body Contouring",
-        languages: "Thai, English",
-        education: "Board Certified Plastic Surgeons",
-        credentials: "Experienced Cosmetic Surgery Team",
-        training: "Specialized training in aesthetic procedures",
-        experience: "Boutique clinic with personalized care",
-        casesPerformed: "Experienced in cosmetic surgery procedures"
-      }
-    ]
-  },
   "bangkok-hospital-pattaya": {
     hospitalName: "Bangkok Hospital Pattaya",
     hospitalSlug: "bangkok-hospital-pattaya",

@@ -92,18 +92,6 @@ const hospitalContent: Record<string, HospitalContent> = {
     ],
     image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/Bangkok-Hospital-Samui.jpg"
   },
-  "samui-clinic": {
-    metaTitle: "Samui Clinic Bandon Hospital | Cosmetic Surgery Koh Samui 2025",
-    metaDescription: "Samui Clinic (Bandon Hospital) - boutique cosmetic surgery on Koh Samui. Personalized care, expert surgeons. Free consultation. Island recovery.",
-    h1Title: "Samui Clinic (Bandon Hospital)",
-    paragraphs: [
-      "Samui Clinic at Bandon Hospital offers boutique cosmetic surgery services on the tropical island of Koh Samui.",
-      "The clinic provides personalized care with experienced surgeons specializing in facial, breast, and body procedures.",
-      "Patients enjoy a relaxed, resort-like atmosphere while receiving world-class medical treatment.",
-      "The clinic's international patient coordinators help arrange all aspects of your surgical journey."
-    ],
-    image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/Samui-Clinic.jpg"
-  },
   "bangkok-hospital-pattaya": {
     metaTitle: "Bangkok Hospital Pattaya | Cosmetic Surgery Pattaya Thailand 2025",
     metaDescription: "Bangkok Hospital Pattaya - JCI accredited international-standard care. Expert cosmetic surgeons. Free consultation. Beach recovery destination.",
