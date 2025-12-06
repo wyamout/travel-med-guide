@@ -10,7 +10,7 @@ const HospitalsSection = () => {
       location: "Bangkok",
       slug: "yanhee-international-hospital",
       description: "World-renowned facility specializing in comprehensive cosmetic procedures",
-      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=600&auto=format&fit=crop",
+      image: "/images/1ccaa7beb933c50c232e7e98132ec12c.jpg",
       accreditation: "JCI Accredited",
     },
     {
@@ -18,7 +18,7 @@ const HospitalsSection = () => {
       location: "Bangkok",
       slug: "pai-clinic",
       description: "Pioneering clinic with expertise in gender confirmation and facial surgery",
-      image: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=600&auto=format&fit=crop",
+      image: "/images/70f02a00901d49fbc464364c456bea78.jpg",
       accreditation: "ISO Certified",
     },
     {
@@ -26,7 +26,7 @@ const HospitalsSection = () => {
       location: "Phuket",
       slug: "phuket-hospital",
       description: "Premium care in Thailand's most beautiful island destination",
-      image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=600&auto=format&fit=crop",
+      image: "/images/1b4382f33b75f4e5349fc34e2be60b3e.jpg",
       accreditation: "JCI Accredited",
     },
   ];
