@@ -46,10 +46,10 @@ const ProcedurePage = () => {
 
   return (
     <PageLayout
-      title={`${procedure.name} Thailand | Bangkok & Phuket`}
+      title={content?.metaTitle || `${procedure.name} Thailand | Bangkok & Phuket`}
       description={content?.metaDescription || `Expert ${procedure.name.toLowerCase()} in Thailand. Board-certified surgeons, JCI hospitals. Save 60-70%. Free consultation.`}
       keywords={`${procedure.name.toLowerCase()} thailand, ${procedure.name.toLowerCase()} bangkok, cosmetic surgery thailand`}
-      canonicalUrl={`https://cosmeticsurgerythailand.com/${procedure.category}/${procedure.slug}`}
+      canonicalUrl={`https://cosmeticsurgerythailand.com/procedures/${procedure.slug}`}
     >
       {/* Hero Section with Sticky Form */}
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">
