@@ -27,10 +27,10 @@ const TestimonialsSection = () => {
   ];
 
   return (
-    <section id="testimonials" className="py-32 bg-background">
+    <section id="testimonials" className="py-20 bg-background">
       <div className="container">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-16">
           <AnimatedSection animation="fade-up">
             <p className="gold-accent flex items-center justify-center gap-3 mb-6">
               <span className="w-12 h-px bg-accent" />
@@ -81,7 +81,7 @@ const TestimonialsSection = () => {
         </div>
 
         {/* Stats */}
-        <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { value: "50,000+", label: "Patients" },
             { value: "20+", label: "Years" },

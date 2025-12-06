@@ -69,8 +69,8 @@ const HeroSection = () => {
               {/* Main image frame */}
               <div className="relative overflow-hidden">
                 <img
-                  src="/images/1ccaa7beb933c50c232e7e98132ec12c.jpg"
-                  alt="Yanhee International Hospital - Luxury cosmetic surgery facility in Thailand"
+                  src="/images/a3919312476064fcecbcbd6d9cb155b4.jpg"
+                  alt="Yanhee International Hospital - Premier cosmetic surgery facility in Thailand"
                   className="w-full h-[600px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
