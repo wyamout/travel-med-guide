@@ -43,13 +43,15 @@ const ProceduresListPage = () => {
       canonicalUrl="https://cosmeticsurgerythailand.com/procedures"
     >
       {/* Hero */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-        <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+      <section className="py-16 md:py-24 bg-primary relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] opacity-10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary-foreground/20" />
+        <div className="container text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-primary-foreground">
             Cosmetic Surgery
-            <span className="block text-primary">Procedures</span>
+            <span className="block text-accent">Procedures</span>
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-primary-foreground/80 max-w-3xl mx-auto">
             Discover our comprehensive range of cosmetic surgery procedures
             performed by board-certified surgeons at JCI-accredited hospitals
             across Thailand.
