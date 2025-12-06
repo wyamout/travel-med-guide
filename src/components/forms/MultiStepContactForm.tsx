@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Progress } from "@/components/ui/progress";
-import { ArrowRight, ArrowLeft, Check, Loader2 } from "lucide-react";
+import { ArrowRight, ArrowLeft, Check, Loader2, Upload, X, Image } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -182,8 +182,11 @@ const initialFormData: FormData = {
 const MultiStepContactForm = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [uploadedImages, setUploadedImages] = useState<File[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
   
   const totalSteps = 6;
@@ -191,6 +194,39 @@ const MultiStepContactForm = () => {
 
   const updateField = (field: keyof FormData, value: string | boolean) => {
     setFormData(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = e.target.files;
+    if (!files) return;
+
+    const newFiles = Array.from(files).filter(file => {
+      // Validate file type
+      if (!file.type.startsWith('image/')) {
+        toast({
+          title: "Invalid file type",
+          description: "Please upload only image files (JPG, PNG, etc.)",
+          variant: "destructive",
+        });
+        return false;
+      }
+      // Validate file size (max 10MB)
+      if (file.size > 10 * 1024 * 1024) {
+        toast({
+          title: "File too large",
+          description: "Please upload images smaller than 10MB",
+          variant: "destructive",
+        });
+        return false;
+      }
+      return true;
+    });
+
+    setUploadedImages(prev => [...prev, ...newFiles].slice(0, 5)); // Max 5 images
+  };
+
+  const removeImage = (index: number) => {
+    setUploadedImages(prev => prev.filter((_, i) => i !== index));
   };
 
   const validateStep = (currentStep: number): boolean => {
@@ -244,8 +280,38 @@ const MultiStepContactForm = () => {
     setIsSubmitting(true);
     
     try {
+      // Upload images first if any
+      const imageUrls: string[] = [];
+      
+      if (uploadedImages.length > 0) {
+        setIsUploading(true);
+        
+        for (const file of uploadedImages) {
+          const fileName = `${Date.now()}-${Math.random().toString(36).substring(7)}-${file.name}`;
+          const { data, error: uploadError } = await supabase.storage
+            .from('consultation-uploads')
+            .upload(fileName, file);
+          
+          if (uploadError) {
+            console.error("Upload error:", uploadError);
+            continue;
+          }
+          
+          // Get public URL
+          const { data: urlData } = supabase.storage
+            .from('consultation-uploads')
+            .getPublicUrl(data.path);
+          
+          if (urlData?.publicUrl) {
+            imageUrls.push(urlData.publicUrl);
+          }
+        }
+        
+        setIsUploading(false);
+      }
+
       const { error } = await supabase.functions.invoke("send-consultation-email", {
-        body: formData,
+        body: { ...formData, imageUrls },
       });
 
       if (error) throw error;
@@ -1016,6 +1082,55 @@ const MultiStepContactForm = () => {
                   <SelectItem value="transaxillary">Transaxillary (armpit)</SelectItem>
                 </SelectContent>
               </Select>
+            </div>
+
+            {/* Photo Upload Section */}
+            <SectionHeader>Upload Photos (Optional)</SectionHeader>
+            
+            <div className="space-y-3">
+              <p className="text-sm text-muted-foreground">
+                Upload photos of the area(s) you wish to have treated. This helps our surgeons provide more accurate feedback.
+                Maximum 5 images, 10MB each.
+              </p>
+              
+              <div className="flex flex-wrap gap-3">
+                {uploadedImages.map((file, index) => (
+                  <div key={index} className="relative w-20 h-20 border border-border rounded overflow-hidden">
+                    <img 
+                      src={URL.createObjectURL(file)} 
+                      alt={`Upload ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => removeImage(index)}
+                      className="absolute top-0 right-0 bg-destructive text-destructive-foreground p-0.5 rounded-bl"
+                    >
+                      <X className="w-3 h-3" />
+                    </button>
+                  </div>
+                ))}
+                
+                {uploadedImages.length < 5 && (
+                  <button
+                    type="button"
+                    onClick={() => fileInputRef.current?.click()}
+                    className="w-20 h-20 border-2 border-dashed border-border rounded flex flex-col items-center justify-center text-muted-foreground hover:border-accent hover:text-accent transition-colors"
+                  >
+                    <Upload className="w-5 h-5 mb-1" />
+                    <span className="text-xs">Add</span>
+                  </button>
+                )}
+              </div>
+              
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept="image/*"
+                multiple
+                onChange={handleImageUpload}
+                className="hidden"
+              />
             </div>
 
             <div className="bg-muted/50 p-4 rounded-sm text-sm text-muted-foreground mt-4">
