@@ -122,4 +122,8 @@ export const getHospitalContent = (slug: string): HospitalContent | undefined =>
   return hospitalContent[slug];
 };
 
+export const getHospitalImage = (slug: string): string | undefined => {
+  return hospitalContent[slug]?.image;
+};
+
 export default hospitalContent;
