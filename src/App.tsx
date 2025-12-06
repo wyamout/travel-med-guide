@@ -47,10 +47,14 @@ const App = () => (
             <Route path="/srs" element={<CategoryPage />} />
             
             {/* Procedure Pages */}
+            <Route path="/procedures/:slug" element={<ProcedurePage />} />
             <Route path="/face/:slug" element={<ProcedurePage />} />
             <Route path="/breast/:slug" element={<ProcedurePage />} />
             <Route path="/body/:slug" element={<ProcedurePage />} />
             <Route path="/srs/:slug" element={<ProcedurePage />} />
+            
+            {/* Hospital Pages */}
+            <Route path="/hospitals/:slug" element={<HospitalPage />} />
             
             {/* Hospital Pages */}
             <Route path="/bangkok/:slug" element={<HospitalPage />} />
