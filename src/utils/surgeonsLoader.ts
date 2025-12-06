@@ -43,6 +43,10 @@ const surgeonImageMap: Record<string, string> = {
   "Dr. Prapat": "/images/surgeons/dr-prapat.jpg",
   // Phuket Hospital
   "Dr. Sanguan": "/images/surgeons/dr-sanguan.jpg",
+  "Dr. Veerawat": "/images/surgeons/dr-veerawat.jpg",
+  "Dr. Songyos": "/images/surgeons/dr-songyos.jpg",
+  "Dr. Thanakom": "/images/surgeons/dr-thanakom.jpg",
+  "Dr. Rushapol": "/images/surgeons/dr-rushapol.jpg",
   // Naravee Clinic
   "Dr. Ronnachai": "/images/surgeons/dr-ronnachai.png",
   // Kamol Hospital
@@ -270,7 +274,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Veerawat",
         fullName: "Dr. Veerawat Tirananmongkol",
-        image: null,
+        image: surgeonImageMap["Dr. Veerawat"] || null,
         specialties: "Facial Surgery, Breast Surgery, Body Contouring",
         languages: "Thai, English",
         education: "Chulalongkorn University Medical School 1988-1994 (2nd Class Honors)",
@@ -282,7 +286,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Songyos",
         fullName: "Dr. Songyos Chantajitr",
-        image: null,
+        image: surgeonImageMap["Dr. Songyos"] || null,
         specialties: "Breast Surgery, Liposuction, Rhinoplasty, Face Lift",
         languages: "Thai, English",
         education: "Medical School, Srinakarinwirot University 1993-1999",
@@ -294,7 +298,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Thanakom",
         fullName: "Dr. Thanakom Laisakul",
-        image: null,
+        image: surgeonImageMap["Dr. Thanakom"] || null,
         specialties: "Breast Surgery, Body Contouring, Face Lift",
         languages: "Thai, English",
         education: "Medical School, Ramathibodi Hospital, Mahidol University 1988-1994",
@@ -306,7 +310,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Rushapol",
         fullName: "Dr. Rushapol Sdawat",
-        image: null,
+        image: surgeonImageMap["Dr. Rushapol"] || null,
         specialties: "Plastic Surgery, Laser Surgery",
         languages: "Thai, English",
         education: "Siriraj Medical School, Mahidol University 1985-1992",
