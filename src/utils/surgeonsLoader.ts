@@ -26,6 +26,15 @@ export interface HospitalSurgeons {
 const surgeonImageMap: Record<string, string> = {
   // Yanhee Hospital
   "Dr. Pitch": "/images/surgeons/dr-pitch.jpg",
+  "Dr. Pramote": "/images/surgeons/dr-pramote.jpg",
+  "Dr. Sanit": "/images/surgeons/dr-sanit.jpg",
+  "Dr. Somboon": "/images/surgeons/dr-somboon.jpg",
+  "Dr. Somsak": "/images/surgeons/dr-somsak.jpg",
+  "Dr. Virat": "/images/surgeons/dr-virat.jpg",
+  "Dr. Wichian": "/images/surgeons/dr-wichian.jpg",
+  "Dr. Greechart": "/images/surgeons/dr-greechart.jpg",
+  "Dr. Sukit": "/images/surgeons/dr-sukit.jpg",
+  "Dr. Vitawat": "/images/surgeons/dr-vitawat.jpg",
   // PAI Clinic
   "Dr. Preecha": "/images/surgeons/dr-preecha.jpg",
   // Phuket Hospital
@@ -57,7 +66,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Pramote",
         fullName: "Dr. Pramote Manurangsee",
-        image: null,
+        image: surgeonImageMap["Dr. Pramote"] || null,
         specialties: "Plastic Surgery, Microsurgery",
         languages: "Thai, English",
         education: "Doctor of Medicine, Chulalongkorn University, Thailand, 1987",
@@ -69,7 +78,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Sanit",
         fullName: "Dr. Sanit Pongkapanakai",
-        image: null,
+        image: surgeonImageMap["Dr. Sanit"] || null,
         specialties: "Plastic Surgery",
         languages: "Thai, English, Mandarin",
         education: "Doctor of Medicine, Virgin Milagrosa University, Philippines, 1988",
@@ -80,8 +89,8 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       },
       {
         name: "Dr. Somboon",
-        fullName: "Dr. Somboon Waiprib",
-        image: null,
+        fullName: "Dr. Somboon Thammarungrong",
+        image: surgeonImageMap["Dr. Somboon"] || null,
         specialties: "Plastic Surgery",
         languages: "Thai, English",
         education: "Doctor of Medicine, Chulalongkorn University, Thailand, 1989",
@@ -91,9 +100,45 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
         casesPerformed: "Rhinoplasty: 5,000+ | Double Eyelid: 2,000+ | Breast Augmentation: 700+"
       },
       {
+        name: "Dr. Somsak",
+        fullName: "Dr. Somsak Tanapongpipat",
+        image: surgeonImageMap["Dr. Somsak"] || null,
+        specialties: "Plastic Surgery",
+        languages: "Thai, English",
+        education: "General Medicine, Songkhlanakarin University, 1993",
+        credentials: "Board of General Surgery, Board of Plastic Surgery of Thailand",
+        training: "General Surgery, Pramongkutklao Hospital, 1998. Plastic Surgery, Pramongkutklao Hospital, 2000",
+        experience: "Yanhee International Hospital, 2004 – present",
+        casesPerformed: "Rhinoplasty: 1,200+ | Double Eyelid: 800+ | Breast Augmentation: 500+"
+      },
+      {
+        name: "Dr. Virat",
+        fullName: "Dr. Virat Siripatrachai",
+        image: surgeonImageMap["Dr. Virat"] || null,
+        specialties: "Plastic Surgery",
+        languages: "Thai, English",
+        education: "Doctor of Medicine, Chiang Mai University, Thailand, 1990",
+        credentials: "Society of Plastic Surgeons of Thailand",
+        training: "General Surgery, Ratchavithi Hospital, 1994. Plastic Surgery, Ramathibodi Hospital, 2005",
+        experience: "Yanhee International Hospital, 2007 – present",
+        casesPerformed: "Rhinoplasty: 1,500+ | Double Eyelid: 800+ | Breast Augmentation: 300+"
+      },
+      {
+        name: "Dr. Wichian",
+        fullName: "Dr. Wichian Sitthicharoenchai",
+        image: surgeonImageMap["Dr. Wichian"] || null,
+        specialties: "Plastic Surgery",
+        languages: "Thai, English",
+        education: "Doctor of Medicine, Khon Kaen University, Thailand, 1986",
+        credentials: "Society of Aesthetic Plastic Surgeons of Thailand",
+        training: "Plastic & Reconstructive Surgery, Siriraj Hospital, 1998",
+        experience: "Yanhee International Hospital, 2000 – present",
+        casesPerformed: "Rhinoplasty: 2,500+ | Double Eyelid: 1,500+ | Facelift: 500+"
+      },
+      {
         name: "Dr. Greechart",
         fullName: "Dr. Greechart Rungsinaporn",
-        image: null,
+        image: surgeonImageMap["Dr. Greechart"] || null,
         specialties: "Plastic Surgery",
         languages: "Thai, English",
         education: "Doctor of Medicine, Chulalongkorn University, Thailand, 1985",
@@ -103,16 +148,28 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
         casesPerformed: "Rhinoplasty: 10,000+ | Double Eyelid: 5,000+ | SRS Male to Female: 500+"
       },
       {
-        name: "Dr. Wichian",
-        fullName: "Dr. Wichian Sitthicharoenchai",
-        image: null,
+        name: "Dr. Sukit",
+        fullName: "Dr. Sukit Phadungkiat",
+        image: surgeonImageMap["Dr. Sukit"] || null,
         specialties: "Plastic Surgery",
         languages: "Thai, English",
-        education: "Doctor of Medicine, Khon Kaen University, Thailand, 1986",
-        credentials: "Society of Aesthetic Plastic Surgeons of Thailand",
-        training: "Plastic & Reconstructive Surgery, Siriraj Hospital, 1998",
-        experience: "Yanhee International Hospital, 2000 – present",
-        casesPerformed: "Rhinoplasty: 2,500+ | Double Eyelid: 1,500+ | Facelift: 500+"
+        education: "Doctor of Medicine, Siriraj Hospital, Thailand, 1985",
+        credentials: "Board Certified Plastic Surgeon, ISAPS Member",
+        training: "Plastic Surgery, King Chulalongkorn Memorial Hospital, 1991",
+        experience: "Yanhee International Hospital, 1999 – present",
+        casesPerformed: "Rhinoplasty: 5,000+ | Double Eyelid: 3,000+ | Breast Augmentation: 1,500+"
+      },
+      {
+        name: "Dr. Vitawat",
+        fullName: "Dr. Vitawat Angspatt",
+        image: surgeonImageMap["Dr. Vitawat"] || null,
+        specialties: "Plastic Surgery",
+        languages: "Thai, English",
+        education: "Doctor of Medicine, Chulalongkorn University, Thailand, 1992",
+        credentials: "Royal College of Surgeons of Thailand, ISAPS Member",
+        training: "Plastic Surgery, Chulalongkorn Hospital, 1998",
+        experience: "Yanhee International Hospital, 2004 – present",
+        casesPerformed: "Rhinoplasty: 2,000+ | Double Eyelid: 1,200+ | Breast Augmentation: 500+"
       }
     ]
   },
