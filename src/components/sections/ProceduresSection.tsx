@@ -40,7 +40,7 @@ const ProceduresSection = () => {
   ];
 
   return (
-    <section id="procedures" className="py-32 bg-background">
+    <section id="procedures" className="py-16 bg-background">
       <div className="container">
         {/* Section Header */}
         <div className="max-w-3xl mb-20">

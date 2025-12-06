@@ -29,7 +29,7 @@ const WhyThailandSection = () => {
   ];
 
   return (
-    <section id="why-thailand" className="py-32 bg-primary text-primary-foreground">
+    <section id="why-thailand" className="py-16 bg-primary text-primary-foreground">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Content */}
