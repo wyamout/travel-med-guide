@@ -7,7 +7,7 @@ import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 const CTASection = () => {
   return (
-    <section className="py-32 bg-background">
+    <section className="py-16 bg-background">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Content */}

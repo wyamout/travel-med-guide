@@ -32,7 +32,7 @@ const HospitalsSection = () => {
   ];
 
   return (
-    <section id="hospitals" className="py-32 bg-muted/30">
+    <section id="hospitals" className="py-16 bg-muted/30">
       <div className="container">
         {/* Section Header */}
         <div className="grid lg:grid-cols-2 gap-16 items-end mb-16">
