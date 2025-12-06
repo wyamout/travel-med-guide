@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import procedureFace from "@/assets/procedure-face.jpg";
+import procedureBreast from "@/assets/procedure-breast.jpg";
+import procedureBody from "@/assets/procedure-body.jpg";
 
 const ProceduresSection = () => {
   const procedures = [
@@ -10,28 +13,28 @@ const ProceduresSection = () => {
       slug: "nose-surgery-thailand",
       category: "Face",
       description: "Expert nose reshaping for natural, harmonious facial balance",
-      image: "/images/70f7d878b485b34401d8aaf9491ab3c3.jpg",
+      image: procedureFace,
     },
     {
       title: "Breast Augmentation",
       slug: "breast-implants-thailand",
       category: "Breast",
       description: "Premium implants with internationally trained surgeons",
-      image: "/images/d4fc96e6760987d76a3a855b966dabc4.jpg",
+      image: procedureBreast,
     },
     {
       title: "Facelift",
       slug: "full-facelift-thailand",
       category: "Face",
       description: "Refined techniques for natural, youthful rejuvenation",
-      image: "/images/83c0d9e7967d42d583244d25fe63d245.jpg",
+      image: procedureFace,
     },
     {
       title: "Liposuction",
       slug: "liposuction-thailand",
       category: "Body",
       description: "Advanced Vaser technology for sculpted, defined contours",
-      image: "/images/15d6370e19c5d7b4ad061c78599c54b0.jpg",
+      image: procedureBody,
     },
   ];
 
