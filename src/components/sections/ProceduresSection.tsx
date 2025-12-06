@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import procedureRhinoplasty from "@/assets/procedure-rhinoplasty.jpg";
 import procedureFacelift from "@/assets/procedure-facelift.jpg";
-import procedureBreast from "@/assets/procedure-breast-real.jpg";
+const procedureBreast = "/images/b6fa8fbae9b9551ca89e03824d3eb155.jpg";
 import procedureBody from "@/assets/procedure-body-real.jpg";
 
 const ProceduresSection = () => {
