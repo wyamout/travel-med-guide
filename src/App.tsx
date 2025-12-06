@@ -13,6 +13,10 @@ import HospitalPage from "./pages/HospitalPage";
 import ContactPage from "./pages/ContactPage";
 import FAQPage from "./pages/FAQPage";
 import CategoryPage from "./pages/CategoryPage";
+import AboutPage from "./pages/AboutPage";
+import PricingPage from "./pages/PricingPage";
+import BeforeAfterPage from "./pages/BeforeAfterPage";
+import SurgeonsPage from "./pages/SurgeonsPage";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +35,10 @@ const App = () => (
             <Route path="/hospitals" element={<HospitalsListPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/faq" element={<FAQPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/prices" element={<PricingPage />} />
+            <Route path="/before-after" element={<BeforeAfterPage />} />
+            <Route path="/surgeons" element={<SurgeonsPage />} />
             
             {/* Category Pages */}
             <Route path="/face" element={<CategoryPage />} />

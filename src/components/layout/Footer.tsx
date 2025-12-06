@@ -18,6 +18,7 @@ const Footer = () => {
   ];
 
   const resources = [
+    { name: "About Us", href: "/about" },
     { name: "Before & After", href: "/before-after" },
     { name: "Surgeons", href: "/surgeons" },
     { name: "Pricing", href: "/prices" },
