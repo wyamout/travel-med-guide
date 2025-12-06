@@ -91,23 +91,11 @@ export const pattayaHospitals: Hospital[] = [
   },
 ];
 
-export const huaHinHospitals: Hospital[] = [
-  {
-    id: "san-paulo",
-    name: "San Paulo Hospital",
-    slug: "san-paulo-hospital",
-    location: "hua-hin",
-    shortDescription: "Quality care in the royal beach resort town",
-    jsonFile: "San Paulo Hospital Hua Hin_9c1954a1.json",
-  },
-];
-
 export const allHospitals: Hospital[] = [
   ...bangkokHospitals,
   ...phuketHospitals,
   ...samuiHospitals,
   ...pattayaHospitals,
-  ...huaHinHospitals,
 ];
 
 export const locations: Location[] = [
@@ -134,12 +122,6 @@ export const locations: Location[] = [
     name: "Pattaya",
     slug: "pattaya",
     hospitals: pattayaHospitals,
-  },
-  {
-    id: "hua-hin",
-    name: "Hua Hin",
-    slug: "hua-hin",
-    hospitals: huaHinHospitals,
   },
 ];
 

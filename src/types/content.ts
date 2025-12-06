@@ -74,7 +74,7 @@ export interface Hospital {
   id: string;
   name: string;
   slug: string;
-  location: 'bangkok' | 'phuket' | 'samui' | 'pattaya' | 'hua-hin';
+  location: 'bangkok' | 'phuket' | 'samui' | 'pattaya';
   shortDescription: string;
   jsonFile: string;
   image?: string;
