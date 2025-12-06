@@ -22,16 +22,16 @@ export interface HospitalSurgeons {
   surgeons: Surgeon[];
 }
 
-// Mapping from surgeon names to local image filenames in /public/images/
+// Mapping from surgeon names to local image filenames in /public/images/surgeons/
 const surgeonImageMap: Record<string, string> = {
   // Yanhee Hospital
-  "Dr. Pitch": "/images/9556033bee8430fba82e16ebbfa91b0e.jpg",
+  "Dr. Pitch": "/images/surgeons/dr-pitch.jpg",
   // PAI Clinic
-  "Dr. Preecha": "/images/1b8c1586ce3f9efe98b925fc9ad076a7.jpg",
+  "Dr. Preecha": "/images/surgeons/dr-preecha.jpg",
   // Phuket Hospital
-  "Dr. Sanguan": "/images/aeb37b29ac80dafd6ca11d94dcc38c88.jpg",
+  "Dr. Sanguan": "/images/surgeons/dr-sanguan.jpg",
   // Naravee Clinic
-  "Dr. Ronnachai": "/images/5b6a7d77b5f65cd74d6c7c70302eebaa.png",
+  "Dr. Ronnachai": "/images/surgeons/dr-ronnachai.png",
 };
 
 const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
