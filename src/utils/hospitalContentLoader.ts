@@ -42,7 +42,7 @@ const hospitalContent: Record<string, HospitalContent> = {
       "Specializing in facial procedures, breast surgery, and body contouring, Naravee combines Thai hospitality with world-class medical care.",
       "The clinic's modern facilities and dedicated patient coordinators ensure a comfortable experience from consultation to recovery."
     ],
-    image: "/images/hospitals/naravee-clinic.jpg"
+    image: "/images/hospitals/naravee-clinic.webp"
   },
   "kamol-hospital": {
     metaTitle: "Kamol Hospital Bangkok | MTF FTM Surgery Thailand 2025",
@@ -54,7 +54,7 @@ const hospitalContent: Record<string, HospitalContent> = {
       "The JCI-accredited facility offers comprehensive MTF and FTM surgical packages with dedicated international patient services.",
       "Patients receive personalized care from consultation through recovery, with multilingual staff available 24/7."
     ],
-    image: "/images/hospitals/kamol-hospital.jpg"
+    image: "/images/hospitals/kamol-hospital.webp"
   },
   "bangpakok-hospital": {
     metaTitle: "Bangpakok 9 Hospital Bangkok | Cosmetic Surgery Thailand 2025",
