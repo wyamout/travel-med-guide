@@ -73,6 +73,9 @@ const HeroSection = () => {
                   src={heroBeauty}
                   alt="Beautiful woman with radiant skin - Cosmetic Surgery Thailand"
                   className="w-full h-[600px] object-cover object-top"
+                  fetchPriority="high"
+                  loading="eager"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
               </div>
