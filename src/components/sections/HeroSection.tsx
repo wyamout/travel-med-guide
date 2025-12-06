@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Shield, Award, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroBeauty from "@/assets/hero-beauty.jpg";
 
 const HeroSection = () => {
   return (
@@ -69,9 +70,9 @@ const HeroSection = () => {
               {/* Main image frame */}
               <div className="relative overflow-hidden">
                 <img
-                  src="/images/a3919312476064fcecbcbd6d9cb155b4.jpg"
-                  alt="Yanhee International Hospital - Premier cosmetic surgery facility in Thailand"
-                  className="w-full h-[600px] object-cover"
+                  src={heroBeauty}
+                  alt="Beautiful woman with radiant skin - Cosmetic Surgery Thailand"
+                  className="w-full h-[600px] object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 via-transparent to-transparent" />
               </div>
