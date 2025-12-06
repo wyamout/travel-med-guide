@@ -3,11 +3,10 @@ import PageLayout from "@/components/layout/PageLayout";
 import { getProcedureBySlug, allProcedures } from "@/data/procedures";
 import { getProcedureContent } from "@/utils/contentLoader";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Check, Phone, Clock, Shield, Award, ArrowRight, Calendar, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import QuickConsultationForm from "@/components/forms/QuickConsultationForm";
 
 const ProcedurePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -151,46 +150,10 @@ const ProcedurePage = () => {
                   </p>
                 </div>
 
-                <form className="space-y-4">
-                  <div>
-                    <Input 
-                      type="text" 
-                      placeholder="Your Name *" 
-                      className="rounded-none border-border bg-muted/30 focus:bg-white"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Input 
-                      type="email" 
-                      placeholder="Email Address *" 
-                      className="rounded-none border-border bg-muted/30 focus:bg-white"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Input 
-                      type="tel" 
-                      placeholder="Phone (with country code)" 
-                      className="rounded-none border-border bg-muted/30 focus:bg-white"
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      rows={3}
-                      placeholder="Tell us about your goals..."
-                      className="rounded-none border-border bg-muted/30 focus:bg-white resize-none"
-                    />
-                  </div>
-                  <input type="hidden" name="procedure" value={procedure.name} />
-                  <Button type="submit" className="w-full cta-button py-6">
-                    Request Free Consultation
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                  <p className="text-xs text-center text-muted-foreground">
-                    100% Free • No Obligation • Confidential
-                  </p>
-                </form>
+                <QuickConsultationForm 
+                  procedure={procedure.name} 
+                  showProcedureSelect={false} 
+                />
               </div>
             </AnimatedSection>
           </div>
