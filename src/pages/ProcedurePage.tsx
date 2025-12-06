@@ -1,16 +1,18 @@
 import { useParams } from "react-router-dom";
 import PageLayout from "@/components/layout/PageLayout";
 import { getProcedureBySlug, allProcedures } from "@/data/procedures";
+import { getProcedureContent } from "@/utils/contentLoader";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Check, Phone, Clock, Shield, Award, ArrowRight } from "lucide-react";
+import { Check, Phone, Clock, Shield, Award, ArrowRight, Calendar, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 
 const ProcedurePage = () => {
   const { slug } = useParams<{ slug: string }>();
   const procedure = slug ? getProcedureBySlug(slug) : null;
+  const content = slug ? getProcedureContent(slug) : null;
 
   if (!procedure) {
     return (
@@ -45,7 +47,7 @@ const ProcedurePage = () => {
   return (
     <PageLayout
       title={`${procedure.name} Thailand | Bangkok & Phuket`}
-      description={`Expert ${procedure.name.toLowerCase()} in Thailand. Board-certified surgeons, JCI hospitals. Save 60-70%. Free consultation.`}
+      description={content?.metaDescription || `Expert ${procedure.name.toLowerCase()} in Thailand. Board-certified surgeons, JCI hospitals. Save 60-70%. Free consultation.`}
       keywords={`${procedure.name.toLowerCase()} thailand, ${procedure.name.toLowerCase()} bangkok, cosmetic surgery thailand`}
       canonicalUrl={`https://cosmeticsurgerythailand.com/${procedure.category}/${procedure.slug}`}
     >
@@ -75,6 +77,38 @@ const ProcedurePage = () => {
                   hospitals in Bangkok, Phuket, and Samui.
                 </p>
               </AnimatedSection>
+
+              {/* Quick Stats */}
+              {content && (
+                <AnimatedSection animation="fade-up" delay={250}>
+                  <div className="flex flex-wrap gap-6 pt-2">
+                    {content.hospitalNights && (
+                      <div className="flex items-center gap-2 text-sm">
+                        <Building2 className="w-4 h-4 text-accent" />
+                        <span className="text-primary-foreground/70">
+                          Hospital Stay: <span className="text-primary-foreground">{content.hospitalNights} night(s)</span>
+                        </span>
+                      </div>
+                    )}
+                    {content.duration && (
+                      <div className="flex items-center gap-2 text-sm">
+                        <Clock className="w-4 h-4 text-accent" />
+                        <span className="text-primary-foreground/70">
+                          Duration: <span className="text-primary-foreground">{content.duration}</span>
+                        </span>
+                      </div>
+                    )}
+                    {content.stayDays && (
+                      <div className="flex items-center gap-2 text-sm">
+                        <Calendar className="w-4 h-4 text-accent" />
+                        <span className="text-primary-foreground/70">
+                          Stay in Thailand: <span className="text-primary-foreground">{content.stayDays}</span>
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </AnimatedSection>
+              )}
 
               <AnimatedSection animation="fade-up" delay={300}>
                 <div className="flex flex-wrap gap-6 pt-4">
@@ -163,8 +197,85 @@ const ProcedurePage = () => {
         </div>
       </section>
 
+      {/* Main Content Section */}
+      {content && content.paragraphs.length > 0 && (
+        <section className="py-16 bg-background">
+          <div className="container">
+            <div className="grid lg:grid-cols-3 gap-12">
+              {/* Main Article Content */}
+              <div className="lg:col-span-2">
+                <AnimatedSection animation="fade-up">
+                  <article className="prose prose-lg max-w-none">
+                    <h2 className="font-serif text-3xl text-foreground mb-8">
+                      About {procedure.name} in Thailand
+                    </h2>
+                    <div className="space-y-6">
+                      {content.paragraphs.map((paragraph, index) => (
+                        <p key={index} className="text-muted-foreground leading-relaxed">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
+                  </article>
+                </AnimatedSection>
+              </div>
+
+              {/* Sidebar */}
+              <div className="lg:col-span-1">
+                <AnimatedSection animation="fade-left" delay={100}>
+                  <div className="bg-muted/30 border border-border p-6 sticky top-32">
+                    <h3 className="font-serif text-xl text-foreground mb-4">
+                      Quick Facts
+                    </h3>
+                    <ul className="space-y-4">
+                      {content.hospitalNights && (
+                        <li className="flex items-start gap-3">
+                          <Building2 className="w-5 h-5 text-accent mt-0.5" />
+                          <div>
+                            <p className="text-sm font-medium text-foreground">Hospital Stay</p>
+                            <p className="text-sm text-muted-foreground">{content.hospitalNights} night(s)</p>
+                          </div>
+                        </li>
+                      )}
+                      {content.duration && (
+                        <li className="flex items-start gap-3">
+                          <Clock className="w-5 h-5 text-accent mt-0.5" />
+                          <div>
+                            <p className="text-sm font-medium text-foreground">Surgery Duration</p>
+                            <p className="text-sm text-muted-foreground">{content.duration}</p>
+                          </div>
+                        </li>
+                      )}
+                      {content.stayDays && (
+                        <li className="flex items-start gap-3">
+                          <Calendar className="w-5 h-5 text-accent mt-0.5" />
+                          <div>
+                            <p className="text-sm font-medium text-foreground">Recommended Stay</p>
+                            <p className="text-sm text-muted-foreground">At least {content.stayDays} in Thailand</p>
+                          </div>
+                        </li>
+                      )}
+                    </ul>
+
+                    <div className="mt-6 pt-6 border-t border-border">
+                      <h4 className="text-sm font-medium text-foreground mb-3">Available Locations</h4>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li>• Bangkok</li>
+                        <li>• Phuket</li>
+                        <li>• Koh Samui</li>
+                        <li>• Pattaya</li>
+                      </ul>
+                    </div>
+                  </div>
+                </AnimatedSection>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Benefits Section */}
-      <section className="py-16 bg-background">
+      <section className="py-16 bg-muted/30">
         <div className="container">
           <AnimatedSection animation="fade-up">
             <div className="text-center max-w-3xl mx-auto mb-12">
@@ -203,7 +314,7 @@ const ProcedurePage = () => {
               },
             ].map((benefit, index) => (
               <AnimatedSection key={benefit.title} animation="fade-up" delay={100 + index * 50}>
-                <div className="bg-card border border-border p-6 hover:border-accent/30 transition-colors">
+                <div className="bg-background border border-border p-6 hover:border-accent/30 transition-colors">
                   <div className="w-10 h-10 bg-accent/10 flex items-center justify-center mb-4">
                     <Check className="w-5 h-5 text-accent" />
                   </div>
@@ -235,7 +346,7 @@ const ProcedurePage = () => {
 
       {/* Related Procedures */}
       {relatedProcedures.length > 0 && (
-        <section className="py-16 bg-muted/30">
+        <section className="py-16 bg-background">
           <div className="container">
             <AnimatedSection animation="fade-up">
               <h2 className="section-title text-foreground mb-8">Related Procedures</h2>
@@ -244,8 +355,8 @@ const ProcedurePage = () => {
               {relatedProcedures.map((related, index) => (
                 <AnimatedSection key={related.id} animation="fade-up" delay={100 + index * 100}>
                   <Link
-                    to={`/${related.category}/${related.slug}`}
-                    className="bg-background border border-border p-6 block hover:border-accent/30 transition-colors group"
+                    to={`/procedures/${related.slug}`}
+                    className="bg-muted/30 border border-border p-6 block hover:border-accent/30 transition-colors group"
                   >
                     <h3 className="font-serif text-xl text-foreground mb-2 group-hover:text-accent transition-colors">
                       {related.name}
