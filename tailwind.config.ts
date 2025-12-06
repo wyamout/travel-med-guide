@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Outfit", "system-ui", "sans-serif"],
-        display: ["Outfit", "system-ui", "sans-serif"],
+        sans: ["Montserrat", "system-ui", "sans-serif"],
+        serif: ["Cormorant Garamond", "Georgia", "serif"],
+        display: ["Cormorant Garamond", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -51,13 +52,12 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        trust: {
-          blue: "hsl(var(--trust-blue))",
-          teal: "hsl(var(--trust-teal))",
-        },
-        cta: {
-          coral: "hsl(var(--cta-coral))",
-        },
+        navy: "hsl(var(--navy))",
+        champagne: "hsl(var(--champagne))",
+        gold: "hsl(var(--gold))",
+        cream: "hsl(var(--cream))",
+        charcoal: "hsl(var(--charcoal))",
+        platinum: "hsl(var(--platinum))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -83,23 +83,20 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        shimmer: {
-          "100%": { transform: "translateX(100%)" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        shimmer: "shimmer 2s infinite",
       },
       backgroundImage: {
         "gradient-hero": "var(--gradient-hero)",
-        "gradient-trust": "var(--gradient-trust)",
-        "gradient-cta": "var(--gradient-cta)",
-        "gradient-glass": "var(--gradient-glass)",
+        "gradient-luxury": "var(--gradient-luxury)",
+        "gradient-gold": "var(--gradient-gold)",
+        "gradient-subtle": "var(--gradient-subtle)",
       },
       boxShadow: {
-        glow: "var(--shadow-glow)",
+        gold: "var(--shadow-gold)",
+        elegant: "var(--shadow-lg)",
       },
     },
   },

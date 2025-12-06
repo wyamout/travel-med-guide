@@ -1,110 +1,116 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Mail, MessageCircle, ArrowRight, Shield, Clock, CheckCircle } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { ArrowRight, Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
-  const benefits = [
-    { icon: CheckCircle, text: "Free, no-obligation consultation" },
-    { icon: Clock, text: "Response within 24 hours" },
-    { icon: Shield, text: "Your information is 100% secure" },
-  ];
-
   return (
-    <section className="py-24 bg-gradient-to-br from-primary via-primary to-primary/90 relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
-
-      <div className="container relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <section className="py-32 bg-background">
+      <div className="container">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Content */}
-          <div className="text-primary-foreground">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
-              Ready to Start Your Transformation Journey?
+          <div>
+            <p className="gold-accent flex items-center gap-3 mb-6">
+              <span className="w-12 h-px bg-accent" />
+              Begin Your Journey
+            </p>
+            <h2 className="section-title text-foreground mb-6">
+              Request Your
+              <span className="block text-accent italic">Consultation</span>
             </h2>
-            <p className="text-xl text-primary-foreground/80 mt-6 leading-relaxed">
-              Get a free, personalized consultation with our expert team. 
-              We'll answer all your questions and help you plan your perfect procedure.
+            <p className="section-subtitle mb-8">
+              Take the first step toward your transformation. Our team will provide 
+              personalized surgeon recommendations and detailed information about your 
+              desired procedure.
             </p>
 
-            <div className="space-y-4 mt-8">
-              {benefits.map((benefit) => (
-                <div key={benefit.text} className="flex items-center gap-3">
-                  <benefit.icon className="w-5 h-5 text-secondary" />
-                  <span className="text-primary-foreground/90">{benefit.text}</span>
-                </div>
-              ))}
+            <div className="space-y-4 text-sm text-muted-foreground mb-8">
+              <p className="flex items-center gap-3">
+                <Shield className="w-4 h-4 text-accent" />
+                Complimentary, no-obligation consultation
+              </p>
+              <p className="flex items-center gap-3">
+                <Shield className="w-4 h-4 text-accent" />
+                Response within 24 hours
+              </p>
+              <p className="flex items-center gap-3">
+                <Shield className="w-4 h-4 text-accent" />
+                Your information is confidential and secure
+              </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <Button 
-                variant="secondary" 
-                size="xl" 
-                className="bg-card text-primary hover:bg-card/90"
-              >
-                <Phone className="w-5 h-5 mr-2" />
-                Call Now
-              </Button>
-              <Button 
-                variant="hero-outline" 
-                size="xl"
-              >
-                <MessageCircle className="w-5 h-5 mr-2" />
-                WhatsApp
-              </Button>
+            <div className="p-8 bg-muted/50 border border-border/50">
+              <p className="font-serif text-2xl text-foreground leading-relaxed italic">
+                "You pay nothing to us. Our service is entirely complimentary. 
+                You pay only the hospital directly for your procedure."
+              </p>
             </div>
           </div>
 
           {/* Form */}
-          <div className="bg-card rounded-3xl p-8 shadow-2xl">
-            <h3 className="text-2xl font-bold text-foreground mb-2">
+          <div className="bg-card border border-border/50 p-10 shadow-elegant">
+            <h3 className="font-serif text-2xl text-foreground mb-2">
               Get Your Free Quote
             </h3>
-            <p className="text-muted-foreground mb-6">
-              Fill out the form below and we'll get back to you within 24 hours.
+            <p className="text-muted-foreground text-sm mb-8">
+              Complete the form below and we'll respond within 24 hours.
             </p>
 
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Your Name *
-                </label>
-                <input
-                  type="text"
-                  placeholder="Enter your full name"
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                />
+            <form className="space-y-5">
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
+                    First Name *
+                  </label>
+                  <Input 
+                    type="text" 
+                    placeholder="John" 
+                    className="rounded-none border-border bg-background"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
+                    Last Name *
+                  </label>
+                  <Input 
+                    type="text" 
+                    placeholder="Doe" 
+                    className="rounded-none border-border bg-background"
+                  />
+                </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
+                <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
                   Email Address *
                 </label>
-                <input
-                  type="email"
-                  placeholder="your@email.com"
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                <Input 
+                  type="email" 
+                  placeholder="john@example.com" 
+                  className="rounded-none border-border bg-background"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Phone Number *
+                <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
+                  Phone (with country code)
                 </label>
-                <input
-                  type="tel"
-                  placeholder="+1 (555) 000-0000"
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                <Input 
+                  type="tel" 
+                  placeholder="+1 234 567 8900" 
+                  className="rounded-none border-border bg-background"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Interested In *
+                <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
+                  Procedure of Interest
                 </label>
-                <select className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all">
+                <select className="w-full px-4 py-2.5 border border-border bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-accent transition-all text-sm">
                   <option value="">Select a procedure</option>
                   <option value="rhinoplasty">Rhinoplasty</option>
-                  <option value="breast-implants">Breast Implants</option>
+                  <option value="breast-augmentation">Breast Augmentation</option>
                   <option value="facelift">Facelift</option>
                   <option value="liposuction">Liposuction</option>
                   <option value="tummy-tuck">Tummy Tuck</option>
@@ -113,24 +119,27 @@ const CTASection = () => {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
+                <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
                   Message (Optional)
                 </label>
-                <textarea
+                <Textarea
                   rows={3}
-                  placeholder="Tell us about your goals or questions..."
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+                  placeholder="Tell us about your goals..."
+                  className="rounded-none border-border bg-background resize-none"
                 />
               </div>
 
-              <Button variant="cta" size="xl" className="w-full">
-                Get Free Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
+              <Button className="w-full cta-button py-6">
+                Request Consultation
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
 
-              <p className="text-xs text-muted-foreground text-center">
-                By submitting this form, you agree to our Privacy Policy. 
-                Your information is secure and will never be shared.
+              <p className="text-xs text-muted-foreground text-center leading-relaxed">
+                By submitting, you agree to our{" "}
+                <Link to="/privacy" className="underline hover:text-foreground">
+                  Privacy Policy
+                </Link>
+                . Your information is secure and never shared.
               </p>
             </form>
           </div>

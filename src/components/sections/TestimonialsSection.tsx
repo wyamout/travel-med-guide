@@ -1,4 +1,4 @@
-import { Star, Quote } from "lucide-react";
+import { Quote } from "lucide-react";
 
 const TestimonialsSection = () => {
   const testimonials = [
@@ -6,77 +6,66 @@ const TestimonialsSection = () => {
       name: "Sarah M.",
       country: "Australia",
       procedure: "Rhinoplasty",
-      rating: 5,
       text: "I was nervous about traveling for surgery, but the team made everything so easy. My results are amazing and I saved over $8,000 compared to Australian prices.",
-      avatar: "SM",
+      avatar: "S",
     },
     {
       name: "Jennifer L.",
       country: "United States",
       procedure: "Breast Augmentation",
-      rating: 5,
-      text: "The hospital was like a 5-star hotel! Dr. Somchai was incredibly skilled and caring. I couldn't be happier with my results. Highly recommend!",
-      avatar: "JL",
+      text: "The hospital was like a 5-star hotel! Dr. Somchai was incredibly skilled and caring. I couldn't be happier with my results.",
+      avatar: "J",
     },
     {
       name: "Emma T.",
       country: "United Kingdom",
-      procedure: "Tummy Tuck + Lipo",
-      rating: 5,
+      procedure: "Tummy Tuck",
       text: "After having three kids, I wanted my body back. The mommy makeover package was incredible value and the aftercare exceeded all expectations.",
-      avatar: "ET",
-    },
-    {
-      name: "Lisa K.",
-      country: "Canada",
-      procedure: "Facelift",
-      rating: 5,
-      text: "I look 15 years younger! The surgeon was an artist. Recovering at a luxury resort in Phuket made the whole experience unforgettable.",
-      avatar: "LK",
+      avatar: "E",
     },
   ];
 
   return (
-    <section id="testimonials" className="py-24 bg-background">
+    <section id="testimonials" className="py-32 bg-background">
       <div className="container">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="trust-badge mb-4">Patient Stories</span>
-          <h2 className="section-title text-foreground mt-4">
-            Hear From Our Happy Patients
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <p className="gold-accent flex items-center justify-center gap-3 mb-6">
+            <span className="w-12 h-px bg-accent" />
+            Patient Stories
+            <span className="w-12 h-px bg-accent" />
+          </p>
+          <h2 className="section-title text-foreground mb-6">
+            Voices of
+            <span className="text-accent italic"> Transformation</span>
           </h2>
-          <p className="section-subtitle mx-auto mt-4">
-            Real stories from real patients who trusted us with their 
-            transformation journey.
+          <p className="section-subtitle mx-auto">
+            Real experiences from patients who entrusted us with their journey.
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {testimonials.map((testimonial, index) => (
+        {/* Testimonials */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
-              className="glass-card rounded-2xl p-8 relative"
+              className="bg-card border border-border/30 p-10 relative"
             >
-              <Quote className="absolute top-6 right-6 w-10 h-10 text-primary/10" />
+              <Quote className="absolute top-8 right-8 w-8 h-8 text-accent/20" />
               
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-                ))}
-              </div>
-
-              <p className="text-foreground mb-6 leading-relaxed">
+              <p className="text-foreground leading-relaxed mb-8 font-light italic">
                 "{testimonial.text}"
               </p>
 
+              <div className="elegant-divider mb-6" />
+
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold">
+                <div className="w-12 h-12 bg-primary flex items-center justify-center text-primary-foreground font-serif text-xl">
                   {testimonial.avatar}
                 </div>
                 <div>
-                  <div className="font-bold text-foreground">{testimonial.name}</div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className="font-medium text-foreground">{testimonial.name}</div>
+                  <div className="text-xs text-muted-foreground tracking-wider uppercase">
                     {testimonial.procedure} • {testimonial.country}
                   </div>
                 </div>
@@ -85,26 +74,23 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Trust Stats */}
-        <div className="mt-16 bg-primary rounded-3xl p-8 md:p-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-primary-foreground">
-            <div>
-              <div className="text-4xl md:text-5xl font-bold">50,000+</div>
-              <div className="text-primary-foreground/70 mt-2">Happy Patients</div>
+        {/* Stats */}
+        <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { value: "50,000+", label: "Patients" },
+            { value: "20+", label: "Years" },
+            { value: "4.9", label: "Rating" },
+            { value: "15+", label: "Hospitals" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <div className="font-serif text-4xl md:text-5xl text-foreground mb-2">
+                {stat.value}
+              </div>
+              <div className="text-xs tracking-widest uppercase text-muted-foreground">
+                {stat.label}
+              </div>
             </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold">20+</div>
-              <div className="text-primary-foreground/70 mt-2">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold">4.9/5</div>
-              <div className="text-primary-foreground/70 mt-2">Patient Rating</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold">15+</div>
-              <div className="text-primary-foreground/70 mt-2">Partner Hospitals</div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

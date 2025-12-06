@@ -1,97 +1,98 @@
-import { Phone, Mail, MapPin, Facebook, Instagram, Youtube } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const procedures = [
-    "Rhinoplasty",
-    "Breast Implants",
-    "Facelift",
-    "Liposuction",
-    "Tummy Tuck",
-    "Eyelid Surgery",
+    { name: "Rhinoplasty", href: "/face/nose-surgery-thailand" },
+    { name: "Breast Augmentation", href: "/breast/breast-implants-thailand" },
+    { name: "Facelift", href: "/face/full-facelift-thailand" },
+    { name: "Liposuction", href: "/body/liposuction-thailand" },
+    { name: "Tummy Tuck", href: "/body/tummy-tuck-thailand" },
   ];
 
   const locations = [
-    "Bangkok Hospitals",
-    "Phuket Hospitals",
-    "Koh Samui Clinics",
-    "Pattaya Hospitals",
+    { name: "Bangkok", href: "/hospitals" },
+    { name: "Phuket", href: "/hospitals" },
+    { name: "Koh Samui", href: "/hospitals" },
+    { name: "Pattaya", href: "/hospitals" },
   ];
 
   const resources = [
-    "Before & After Gallery",
-    "Patient Testimonials",
-    "Pricing Guide",
-    "FAQs",
-    "Medical Questionnaire",
-    "Travel Information",
+    { name: "Before & After", href: "/before-after" },
+    { name: "Surgeons", href: "/surgeons" },
+    { name: "Pricing", href: "/prices" },
+    { name: "FAQs", href: "/faq" },
   ];
 
   return (
-    <footer className="bg-foreground text-background/90">
+    <footer className="bg-primary text-primary-foreground">
       {/* Main Footer */}
-      <div className="container py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="container py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
           {/* Company Info */}
-          <div className="space-y-6">
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">CS</span>
-              </div>
-              <div>
-                <h3 className="font-bold text-lg text-card">Cosmetic Surgery</h3>
-                <p className="text-sm text-card/60">Thailand</p>
-              </div>
-            </div>
-            <p className="text-card/70 leading-relaxed">
-              Thailand's premier cosmetic surgery destination. World-class surgeons, 
-              JCI-accredited hospitals, and exceptional care at affordable prices.
+          <div className="lg:col-span-1">
+            <Link to="/" className="block mb-6">
+              <span className="font-serif text-2xl font-medium">
+                Cosmetic Surgery
+              </span>
+              <span className="block text-xs tracking-[0.3em] uppercase text-primary-foreground/60 mt-1">
+                Thailand
+              </span>
+            </Link>
+            <p className="text-primary-foreground/60 text-sm leading-relaxed font-light">
+              Thailand's premier destination for world-class cosmetic surgery. 
+              Expert surgeons, accredited hospitals, exceptional care.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 bg-card/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-card/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-card/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                <Youtube className="w-5 h-5" />
-              </a>
-            </div>
           </div>
 
           {/* Procedures */}
           <div>
-            <h4 className="font-bold text-card mb-6">Popular Procedures</h4>
+            <h4 className="text-xs tracking-widest uppercase mb-6 text-primary-foreground/80">
+              Procedures
+            </h4>
             <ul className="space-y-3">
               {procedures.map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-card/70 hover:text-primary transition-colors">
-                    {item}
-                  </a>
+                <li key={item.name}>
+                  <Link 
+                    to={item.href} 
+                    className="text-primary-foreground/60 hover:text-accent transition-colors text-sm font-light"
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Locations */}
+          {/* Locations & Resources */}
           <div>
-            <h4 className="font-bold text-card mb-6">Our Locations</h4>
-            <ul className="space-y-3">
+            <h4 className="text-xs tracking-widest uppercase mb-6 text-primary-foreground/80">
+              Locations
+            </h4>
+            <ul className="space-y-3 mb-8">
               {locations.map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-card/70 hover:text-primary transition-colors">
-                    {item}
-                  </a>
+                <li key={item.name}>
+                  <Link 
+                    to={item.href} 
+                    className="text-primary-foreground/60 hover:text-accent transition-colors text-sm font-light"
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
-            <h4 className="font-bold text-card mt-8 mb-4">Resources</h4>
+            <h4 className="text-xs tracking-widest uppercase mb-6 text-primary-foreground/80">
+              Resources
+            </h4>
             <ul className="space-y-3">
-              {resources.slice(0, 3).map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-card/70 hover:text-primary transition-colors">
-                    {item}
-                  </a>
+              {resources.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    to={item.href} 
+                    className="text-primary-foreground/60 hover:text-accent transition-colors text-sm font-light"
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -99,38 +100,36 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-bold text-card mb-6">Contact Us</h4>
+            <h4 className="text-xs tracking-widest uppercase mb-6 text-primary-foreground/80">
+              Contact
+            </h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-primary mt-0.5 shrink-0" />
+                <Phone className="w-4 h-4 text-accent mt-1 shrink-0" />
                 <div>
-                  <p className="text-card/70">Thailand</p>
-                  <a href="tel:+6626533880" className="text-card hover:text-primary transition-colors font-medium">
+                  <p className="text-primary-foreground/50 text-xs mb-1">Thailand</p>
+                  <a 
+                    href="tel:+6626533880" 
+                    className="text-primary-foreground hover:text-accent transition-colors text-sm"
+                  >
                     +66 2 653 3880
                   </a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Phone className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <div>
-                  <p className="text-card/70">Australia</p>
-                  <a href="tel:+0280050056" className="text-card hover:text-primary transition-colors font-medium">
-                    +02 800 500 56
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <a href="mailto:info@cosmeticsurgerythailand.com" className="text-card hover:text-primary transition-colors break-all">
-                  info@cosmeticsurgerythailand.com
+                <Mail className="w-4 h-4 text-accent mt-1 shrink-0" />
+                <a 
+                  href="mailto:inquire@cosmeticsurgerythailand.com" 
+                  className="text-primary-foreground hover:text-accent transition-colors text-sm break-all"
+                >
+                  inquire@cosmeticsurgerythailand.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
-                <p className="text-card/70">
+                <MapPin className="w-4 h-4 text-accent mt-1 shrink-0" />
+                <p className="text-primary-foreground/60 text-sm font-light">
                   One Pacific Place, Unit 1708,<br />
-                  140 Sukhumvit Rd., Klongtoey,<br />
-                  Bangkok 10110, Thailand
+                  140 Sukhumvit Rd., Bangkok
                 </p>
               </li>
             </ul>
@@ -139,15 +138,30 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-card/10">
+      <div className="border-t border-primary-foreground/10">
         <div className="container py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-card/60 text-sm text-center md:text-left">
+          <p className="text-primary-foreground/40 text-xs tracking-wider">
             © 2024 Cosmetic Surgery Thailand. All rights reserved.
           </p>
-          <div className="flex items-center gap-6 text-sm">
-            <a href="#" className="text-card/60 hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="text-card/60 hover:text-primary transition-colors">Terms of Service</a>
-            <a href="#" className="text-card/60 hover:text-primary transition-colors">Sitemap</a>
+          <div className="flex items-center gap-8 text-xs tracking-wider">
+            <Link 
+              to="/privacy" 
+              className="text-primary-foreground/40 hover:text-accent transition-colors"
+            >
+              Privacy
+            </Link>
+            <Link 
+              to="/faq" 
+              className="text-primary-foreground/40 hover:text-accent transition-colors"
+            >
+              FAQ
+            </Link>
+            <Link 
+              to="/contact" 
+              className="text-primary-foreground/40 hover:text-accent transition-colors"
+            >
+              Contact
+            </Link>
           </div>
         </div>
       </div>
