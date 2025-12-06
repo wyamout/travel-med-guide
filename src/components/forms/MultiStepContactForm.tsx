@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -182,8 +183,27 @@ const initialFormData: FormData = {
 const breastProcedures = ["Breast Implants", "Breast Lift", "Breast Reduction"];
 
 const MultiStepContactForm = () => {
+  const [searchParams] = useSearchParams();
   const [step, setStep] = useState(1);
-  const [formData, setFormData] = useState<FormData>(initialFormData);
+  const [formData, setFormData] = useState<FormData>(() => {
+    // Initialize with URL params if present
+    const urlFirstName = searchParams.get("firstName") || "";
+    const urlLastName = searchParams.get("lastName") || "";
+    const urlEmail = searchParams.get("email") || "";
+    const urlPhone = searchParams.get("phone") || "";
+    const urlProcedure = searchParams.get("procedure") || "";
+    const urlMessage = searchParams.get("message") || "";
+    
+    return {
+      ...initialFormData,
+      firstName: urlFirstName,
+      lastName: urlLastName,
+      email: urlEmail,
+      phone: urlPhone,
+      procedure: urlProcedure,
+      expectedResults: urlMessage,
+    };
+  });
   const [uploadedImages, setUploadedImages] = useState<File[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);

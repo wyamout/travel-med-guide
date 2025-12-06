@@ -1,9 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { ArrowRight, Shield } from "lucide-react";
+import { Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import QuickConsultationForm from "@/components/forms/QuickConsultationForm";
 
 const CTASection = () => {
   return (
@@ -71,91 +70,7 @@ const CTASection = () => {
                 Complete the form below and we'll respond within 24 hours.
               </p>
 
-              <form className="space-y-5">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
-                      First Name *
-                    </label>
-                    <Input 
-                      type="text" 
-                      placeholder="John" 
-                      className="rounded-none border-border bg-muted/30 focus:bg-white"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
-                      Last Name *
-                    </label>
-                    <Input 
-                      type="text" 
-                      placeholder="Doe" 
-                      className="rounded-none border-border bg-muted/30 focus:bg-white"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
-                    Email Address *
-                  </label>
-                  <Input 
-                    type="email" 
-                    placeholder="john@example.com" 
-                    className="rounded-none border-border bg-muted/30 focus:bg-white"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
-                    Phone (with country code)
-                  </label>
-                  <Input 
-                    type="tel" 
-                    placeholder="+1 234 567 8900" 
-                    className="rounded-none border-border bg-muted/30 focus:bg-white"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
-                    Procedure of Interest
-                  </label>
-                  <select className="w-full px-4 py-2.5 border border-border bg-muted/30 text-foreground focus:outline-none focus:ring-1 focus:ring-accent focus:bg-white transition-all text-sm">
-                    <option value="">Select a procedure</option>
-                    <option value="rhinoplasty">Rhinoplasty</option>
-                    <option value="breast-augmentation">Breast Augmentation</option>
-                    <option value="facelift">Facelift</option>
-                    <option value="liposuction">Liposuction</option>
-                    <option value="tummy-tuck">Tummy Tuck</option>
-                    <option value="other">Other / Multiple Procedures</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
-                    Message (Optional)
-                  </label>
-                  <Textarea
-                    rows={3}
-                    placeholder="Tell us about your goals..."
-                    className="rounded-none border-border bg-muted/30 focus:bg-white resize-none"
-                  />
-                </div>
-
-                <Button className="w-full cta-button py-6">
-                  Request Consultation
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-
-                <p className="text-xs text-muted-foreground text-center leading-relaxed">
-                  By submitting, you agree to our{" "}
-                  <Link to="/privacy" className="underline hover:text-foreground">
-                    Privacy Policy
-                  </Link>
-                  . Your information is secure and never shared.
-                </p>
-              </form>
+              <QuickConsultationForm />
             </div>
           </AnimatedSection>
         </div>
