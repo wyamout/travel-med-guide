@@ -40,9 +40,9 @@ const HeroSection = () => {
                   Request Consultation
                 </Button>
               </Link>
-              <Link to="/before-after">
+              <Link to="/procedures">
                 <Button size="lg" variant="outline" className="cta-button-outline px-10 py-6">
-                  View Results
+                  View Procedures
                 </Button>
               </Link>
             </div>
