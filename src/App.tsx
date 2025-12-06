@@ -6,6 +6,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import ProcedurePage from "./pages/ProcedurePage";
+import ProceduresListPage from "./pages/ProceduresListPage";
+import HospitalsListPage from "./pages/HospitalsListPage";
+import HospitalPage from "./pages/HospitalPage";
+import ContactPage from "./pages/ContactPage";
+import FAQPage from "./pages/FAQPage";
+import CategoryPage from "./pages/CategoryPage";
 
 const queryClient = new QueryClient();
 
@@ -18,7 +25,32 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            
+            {/* Main Pages */}
+            <Route path="/procedures" element={<ProceduresListPage />} />
+            <Route path="/hospitals" element={<HospitalsListPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/faq" element={<FAQPage />} />
+            
+            {/* Category Pages */}
+            <Route path="/face" element={<CategoryPage />} />
+            <Route path="/breast" element={<CategoryPage />} />
+            <Route path="/body" element={<CategoryPage />} />
+            <Route path="/srs" element={<CategoryPage />} />
+            
+            {/* Procedure Pages */}
+            <Route path="/face/:slug" element={<ProcedurePage />} />
+            <Route path="/breast/:slug" element={<ProcedurePage />} />
+            <Route path="/body/:slug" element={<ProcedurePage />} />
+            <Route path="/srs/:slug" element={<ProcedurePage />} />
+            
+            {/* Hospital Pages */}
+            <Route path="/bangkok/:slug" element={<HospitalPage />} />
+            <Route path="/phuket/:slug" element={<HospitalPage />} />
+            <Route path="/samui/:slug" element={<HospitalPage />} />
+            <Route path="/pattaya/:slug" element={<HospitalPage />} />
+            <Route path="/hua-hin/:slug" element={<HospitalPage />} />
+            
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
