@@ -2,6 +2,7 @@ import { Award, Globe, Shield, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import whyThailandImage from "@/assets/why-thailand.jpg";
 
 const WhyThailandSection = () => {
   const benefits = [
@@ -92,8 +93,8 @@ const WhyThailandSection = () => {
             <div className="relative">
               <div className="relative">
                 <img
-                  src="/images/06ea39705eb62886b2f35fc41fc799eb.jpg"
-                  alt="Naravee Aesthetic Center - Luxury medical facility in Thailand"
+                  src={whyThailandImage}
+                  alt="Luxury medical facility in Thailand - Premium healthcare destination"
                   className="w-full h-[600px] object-cover"
                 />
                 
