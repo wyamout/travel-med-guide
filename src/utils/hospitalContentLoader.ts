@@ -66,7 +66,7 @@ const hospitalContent: Record<string, HospitalContent> = {
       "With modern facilities and international patient coordinators, Bangpakok provides seamless care for medical tourists.",
       "The hospital offers competitive pricing and comprehensive packages including accommodation and airport transfers."
     ],
-    image: "/images/hospitals/bangpakok-hospital.jpg"
+    image: "/images/hospitals/bangpakok-hospital.webp"
   },
   "phuket-hospital": {
     metaTitle: "Phuket Hospital PIAC | Cosmetic Surgery Phuket Thailand 2025",
