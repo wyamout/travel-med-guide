@@ -39,14 +39,14 @@ const ProceduresSection = () => {
       <div className="container">
         {/* Section Header */}
         <div className="max-w-3xl mb-20">
-          <p className="gold-accent flex items-center gap-3 mb-6">
+          <p className="gold-accent flex items-center gap-3 mb-6 animate-fade-up">
             <span className="w-12 h-px bg-accent" />
             Our Expertise
           </p>
-          <h2 className="section-title text-foreground mb-6">
+          <h2 className="section-title text-foreground mb-6 animate-fade-up stagger-1">
             Signature Procedures
           </h2>
-          <p className="section-subtitle">
+          <p className="section-subtitle animate-fade-up stagger-2">
             Each procedure is performed with meticulous attention to detail, 
             combining surgical precision with an artistic eye for natural beauty.
           </p>
@@ -58,7 +58,7 @@ const ProceduresSection = () => {
             <Link
               key={procedure.title}
               to={`/${procedure.category.toLowerCase()}/${procedure.slug}`}
-              className="group relative overflow-hidden"
+              className={`group relative overflow-hidden animate-fade-up hover-lift stagger-${index + 3}`}
             >
               <div className="relative h-[400px] overflow-hidden">
                 <img
@@ -90,7 +90,7 @@ const ProceduresSection = () => {
         </div>
 
         {/* View All */}
-        <div className="flex justify-center mt-16">
+        <div className="flex justify-center mt-16 animate-fade-up stagger-7">
           <Link to="/procedures">
             <Button variant="outline" size="lg" className="cta-button-outline px-12">
               View All Procedures
