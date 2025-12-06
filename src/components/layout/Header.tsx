@@ -26,8 +26,8 @@ const Header = () => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-background/98 backdrop-blur-md shadow-md"
-          : "bg-background/95 backdrop-blur-md"
+          ? "bg-background shadow-md"
+          : "bg-background/95"
       }`}
     >
       {/* Top Bar */}
@@ -62,7 +62,9 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-4 group">
             <div className="flex flex-col">
-              <span className="font-serif text-2xl md:text-3xl font-medium text-foreground tracking-tight group-hover:text-accent transition-colors duration-300">
+              <span className={`font-serif text-2xl md:text-3xl font-medium tracking-tight transition-colors duration-300 ${
+                isScrolled ? "text-accent" : "text-foreground group-hover:text-accent"
+              }`}>
                 Cosmetic Surgery
               </span>
               <span className="text-xs tracking-[0.3em] uppercase text-muted-foreground font-light">

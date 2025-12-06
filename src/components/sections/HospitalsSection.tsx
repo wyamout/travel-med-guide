@@ -10,7 +10,7 @@ const HospitalsSection = () => {
       location: "Bangkok",
       slug: "yanhee-international-hospital",
       description: "World-renowned facility specializing in comprehensive cosmetic procedures",
-      image: "/images/1ccaa7beb933c50c232e7e98132ec12c.jpg",
+      image: "/images/a3919312476064fcecbcbd6d9cb155b4.jpg",
       accreditation: "JCI Accredited",
     },
     {
@@ -18,7 +18,7 @@ const HospitalsSection = () => {
       location: "Bangkok",
       slug: "pai-clinic",
       description: "Pioneering clinic with expertise in gender confirmation and facial surgery",
-      image: "/images/70f02a00901d49fbc464364c456bea78.jpg",
+      image: "/images/30e48bef1ef185a390a8296f431c2333.jpg",
       accreditation: "ISO Certified",
     },
     {
@@ -66,7 +66,7 @@ const HospitalsSection = () => {
                 to={`/bangkok/${hospital.slug}`}
                 className="group block"
               >
-                <div className="relative h-[400px] overflow-hidden mb-6">
+                <div className="relative h-[300px] overflow-hidden mb-6">
                   <img
                     src={hospital.image}
                     alt={`${hospital.name} - ${hospital.location}, Thailand`}

@@ -92,8 +92,8 @@ const WhyThailandSection = () => {
             <div className="relative">
               <div className="relative">
                 <img
-                  src="/images/1b4382f33b75f4e5349fc34e2be60b3e.jpg"
-                  alt="Phuket International Hospital - Luxury medical facility in Thailand"
+                  src="/images/06ea39705eb62886b2f35fc41fc799eb.jpg"
+                  alt="Naravee Aesthetic Center - Luxury medical facility in Thailand"
                   className="w-full h-[600px] object-cover"
                 />
                 
