@@ -33,30 +33,38 @@ interface ConsultationRequest {
   birthControl: string;
   lastDelivery: string;
   lastBreastfeed: string;
-  diabetes: string;
-  bloodDisorders: string;
+  diabetes: string | boolean;
+  bloodDisorders: string | boolean;
   heartCondition: string;
-  bloodPressure: string;
-  thyroid: string;
-  lung: string;
-  kidneyLiver: string;
-  cancer: string;
-  hivAids: string;
-  depression: string;
-  neurologic: string;
-  anesthesia: string;
-  dvt: string;
+  bloodPressure: string | boolean;
+  thyroid: string | boolean;
+  lung: string | boolean;
+  kidneyLiver: string | boolean;
+  cancer: string | boolean;
+  hivAids: string | boolean;
+  depression: string | boolean;
+  neurologic: string | boolean;
+  neurological: string | boolean;
+  anesthesia: string | boolean;
+  dvt: string | boolean;
+  dvtPulmonary: string | boolean;
   medicalConditionsDetails: string;
   otherMedicalConditions: string;
   hospitalizedPast12Months: string;
   hospitalizedDetails: string;
+  recentSurgery: string;
+  recentSurgeryDetails: string;
   implantsMetal: string;
   implantsMetalDetails: string;
+  implants: string;
+  implantsDetails: string;
   healingDifficulty: string;
   allergies: string;
   allergiesDetails: string;
   medications: string;
+  currentMedications: string;
   vitamins: string;
+  vitaminsSupplements: string;
   maoInhibitor: string;
   maoLastDose: string;
   anticoagulant: string;
@@ -73,6 +81,7 @@ interface ConsultationRequest {
   otherConditions: string;
   howDidYouHear: string;
   additionalMessage: string;
+  imageUrls?: string[];
 }
 
 function calculateAge(dateOfBirth: string): string {
@@ -94,6 +103,14 @@ function formatDate(dateStr: string): string {
   const month = (date.getMonth() + 1).toString().padStart(2, '0');
   const year = date.getFullYear();
   return `${day}/${month}/${year}`;
+}
+
+function formatYesNo(value: string | boolean | undefined): string {
+  if (value === true) return "Yes";
+  if (value === false) return "No";
+  if (value === "yes") return "Yes";
+  if (value === "no") return "No";
+  return value || "";
 }
 
 async function sendElasticEmail(to: string, subject: string, htmlBody: string, replyTo?: string): Promise<any> {
@@ -237,49 +254,49 @@ const handler = async (req: Request): Promise<Response> => {
 </tr>
 <tr valign="top">
 <td colspan="5" height="19" style="padding: 8px;">Diabetes or blood sugar problems</td>
-<td colspan="2" style="padding: 8px;">${data.diabetes || ""}</td>
+<td colspan="2" style="padding: 8px;">${formatYesNo(data.diabetes)}</td>
 <td colspan="4" style="padding: 8px;"></td>
 <td colspan="9" style="padding: 8px;">Thyroid problems</td>
-<td colspan="4" style="padding: 8px;">${data.thyroid || ""}</td>
+<td colspan="4" style="padding: 8px;">${formatYesNo(data.thyroid)}</td>
 </tr>
 <tr valign="top">
 <td colspan="5" height="19" style="padding: 8px;">Heart problems</td>
-<td colspan="2" style="padding: 8px;">${data.heartCondition || ""}</td>
+<td colspan="2" style="padding: 8px;">${formatYesNo(data.heartCondition)}</td>
 <td colspan="4" style="padding: 8px;"></td>
 <td colspan="9" style="padding: 8px;">Lung problems</td>
-<td colspan="4" style="padding: 8px;">${data.lung || ""}</td>
+<td colspan="4" style="padding: 8px;">${formatYesNo(data.lung)}</td>
 </tr>
 <tr valign="top">
 <td colspan="5" height="19" style="padding: 8px;">Blood pressure problems</td>
-<td colspan="2" style="padding: 8px;">${data.bloodPressure || ""}</td>
+<td colspan="2" style="padding: 8px;">${formatYesNo(data.bloodPressure)}</td>
 <td colspan="4" style="padding: 8px;"></td>
 <td colspan="9" style="padding: 8px;">Kidney or Liver problems</td>
-<td colspan="4" style="padding: 8px;">${data.kidneyLiver || ""}</td>
+<td colspan="4" style="padding: 8px;">${formatYesNo(data.kidneyLiver)}</td>
 </tr>
 <tr valign="top">
 <td colspan="5" height="19" style="padding: 8px;">Blood disorders</td>
-<td colspan="2" style="padding: 8px;">${data.bloodDisorders || ""}</td>
+<td colspan="2" style="padding: 8px;">${formatYesNo(data.bloodDisorders)}</td>
 <td colspan="4" style="padding: 8px;"></td>
 <td colspan="9" style="padding: 8px;">Previous/current history of cancer</td>
-<td colspan="4" style="padding: 8px;">${data.cancer || ""}</td>
+<td colspan="4" style="padding: 8px;">${formatYesNo(data.cancer)}</td>
 </tr>
 <tr valign="top">
 <td colspan="5" height="19" style="padding: 8px;">HIV or AIDS</td>
-<td colspan="2" style="padding: 8px;">${data.hivAids || ""}</td>
+<td colspan="2" style="padding: 8px;">${formatYesNo(data.hivAids)}</td>
 <td colspan="4" style="padding: 8px;"></td>
 <td colspan="9" style="padding: 8px;">Depression</td>
-<td colspan="4" style="padding: 8px;">${data.depression || ""}</td>
+<td colspan="4" style="padding: 8px;">${formatYesNo(data.depression)}</td>
 </tr>
 <tr valign="top">
 <td colspan="5" height="19" style="padding: 8px;">Neurologic problems</td>
-<td colspan="2" style="padding: 8px;">${data.neurologic || ""}</td>
+<td colspan="2" style="padding: 8px;">${formatYesNo(data.neurological || data.neurologic)}</td>
 <td colspan="4" style="padding: 8px;"></td>
 <td colspan="9" style="padding: 8px;">Anesthesia problems</td>
-<td colspan="4" style="padding: 8px;">${data.anesthesia || ""}</td>
+<td colspan="4" style="padding: 8px;">${formatYesNo(data.anesthesia)}</td>
 </tr>
 <tr valign="top">
 <td colspan="5" height="19" style="padding: 8px;">DVT and Pulmonary embolism</td>
-<td colspan="2" style="padding: 8px;">${data.dvt || ""}</td>
+<td colspan="2" style="padding: 8px;">${formatYesNo(data.dvtPulmonary || data.dvt)}</td>
 <td colspan="17" style="padding: 8px;"></td>
 </tr>
 <tr valign="top">
@@ -318,27 +335,27 @@ const handler = async (req: Request): Promise<Response> => {
 </tr>
 <tr valign="top">
 <td colspan="14" height="19" style="padding: 8px;"><b>Have you been hospitalized, had surgery or received medical care within the past 12 months?</b></td>
-<td colspan="10" style="padding: 8px;">${data.hospitalizedPast12Months || ""}</td>
+<td colspan="10" style="padding: 8px;">${formatYesNo(data.recentSurgery || data.hospitalizedPast12Months)}</td>
 </tr>
 <tr valign="top">
 <td colspan="14" height="29" style="padding: 8px;">If yes, what was the reason for this?</td>
-<td colspan="10" style="padding: 8px;">${data.hospitalizedDetails || ""}</td>
+<td colspan="10" style="padding: 8px;">${data.recentSurgeryDetails || data.hospitalizedDetails || ""}</td>
 </tr>
 <tr valign="top">
 <td colspan="14" height="19" style="padding: 8px;"><b>Do you have implants or any metal objects in your body?</b></td>
-<td colspan="10" style="padding: 8px;">${data.implantsMetal || ""}</td>
+<td colspan="10" style="padding: 8px;">${formatYesNo(data.implants || data.implantsMetal)}</td>
 </tr>
 <tr valign="top">
 <td colspan="14" height="28" style="padding: 8px;">If yes, please specify:</td>
-<td colspan="10" style="padding: 8px;">${data.implantsMetalDetails || ""}</td>
+<td colspan="10" style="padding: 8px;">${data.implantsDetails || data.implantsMetalDetails || ""}</td>
 </tr>
 <tr valign="top">
 <td colspan="14" height="23" style="padding: 8px;"><b>Do you have difficulty with healing or scarring?</b></td>
-<td colspan="10" style="padding: 8px;">${data.healingDifficulty || ""}</td>
+<td colspan="10" style="padding: 8px;">${formatYesNo(data.healingDifficulty)}</td>
 </tr>
 <tr valign="top">
 <td colspan="14" height="19" style="padding: 8px;"><b>Do you have any allergies to food, drugs, etc?</b></td>
-<td colspan="10" style="padding: 8px;">${data.allergies || ""}</td>
+<td colspan="10" style="padding: 8px;">${formatYesNo(data.allergies)}</td>
 </tr>
 <tr valign="top">
 <td colspan="14" height="30" style="padding: 8px;">If yes, please specify:</td>
@@ -346,11 +363,11 @@ const handler = async (req: Request): Promise<Response> => {
 </tr>
 <tr valign="top">
 <td colspan="14" height="30" style="padding: 8px;"><b>List all medications you currently take including dosage for each:</b></td>
-<td colspan="10" style="padding: 8px;">${data.medications || ""}</td>
+<td colspan="10" style="padding: 8px;">${data.currentMedications || data.medications || ""}</td>
 </tr>
 <tr valign="top">
 <td colspan="14" height="40" style="padding: 8px;"><b>List all vitamins or food/nutritional supplements you currently take:</b></td>
-<td colspan="10" style="padding: 8px;">${data.vitamins || ""}</td>
+<td colspan="10" style="padding: 8px;">${data.vitaminsSupplements || data.vitamins || ""}</td>
 </tr>
 <tr valign="top">
 <td colspan="14" height="19" style="padding: 8px;"><b>Have you ever taken a MAO inhibitor such as Nardil, Marplan or Parnate?</b></td>
@@ -418,6 +435,21 @@ const handler = async (req: Request): Promise<Response> => {
 <td colspan="14" height="19" style="padding: 8px;"><b>Additional Message:</b></td>
 <td colspan="10" style="padding: 8px;">${data.additionalMessage || ""}</td>
 </tr>
+${data.imageUrls && data.imageUrls.length > 0 ? `
+<tr valign="top">
+<td colspan="24" bgcolor="#daeef3" height="14" style="padding: 8px;"><b>UPLOADED PHOTOS</b></td>
+</tr>
+<tr valign="top">
+<td colspan="24" style="padding: 8px;">
+${data.imageUrls.map((url, i) => `<a href="${url}" target="_blank" style="margin-right: 10px;">Photo ${i + 1}</a>`).join('')}
+</td>
+</tr>
+<tr valign="top">
+<td colspan="24" style="padding: 8px;">
+${data.imageUrls.map((url) => `<img src="${url}" alt="Patient photo" style="max-width: 200px; margin: 5px; border: 1px solid #ccc;" />`).join('')}
+</td>
+</tr>
+` : ''}
 </tbody>
 </table>
     `;
