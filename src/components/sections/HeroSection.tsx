@@ -35,16 +35,16 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-up stagger-3">
-              <Link to="/contact">
-                <Button size="lg" className="cta-button px-10 py-6 hover-glow">
+              <Button size="lg" className="cta-button px-10 py-6 hover-glow min-h-[48px]" asChild>
+                <Link to="/contact">
                   Request Consultation
-                </Button>
-              </Link>
-              <Link to="/procedures">
-                <Button size="lg" variant="outline" className="cta-button-outline px-10 py-6">
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="cta-button-outline px-10 py-6 min-h-[48px]" asChild>
+                <Link to="/procedures">
                   View Procedures
-                </Button>
-              </Link>
+                </Link>
+              </Button>
             </div>
 
             {/* Subtle trust indicators */}
@@ -82,7 +82,7 @@ const HeroSection = () => {
 
               {/* Elegant overlay card */}
               <div className="absolute -bottom-8 -left-8 bg-card border border-border/50 p-8 shadow-elegant max-w-sm animate-slide-in-left stagger-5">
-                <p className="gold-accent mb-3">Excellence in Every Detail</p>
+                <p className="text-accent font-semibold tracking-wide uppercase text-xs mb-3">Excellence in Every Detail</p>
                 <p className="text-foreground font-serif text-2xl leading-snug">
                   "Where medical precision meets aesthetic artistry"
                 </p>

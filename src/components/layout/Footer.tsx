@@ -35,11 +35,11 @@ const Footer = () => {
               <span className="font-serif text-2xl font-medium">
                 Cosmetic Surgery
               </span>
-              <span className="block text-xs tracking-[0.3em] uppercase text-primary-foreground/60 mt-1">
+              <span className="block text-xs tracking-[0.3em] uppercase text-primary-foreground/70 mt-1">
                 Thailand
               </span>
             </Link>
-            <p className="text-primary-foreground/60 text-sm leading-relaxed font-light">
+            <p className="text-primary-foreground/70 text-sm leading-relaxed font-light">
               Thailand's premier destination for world-class cosmetic surgery. 
               Expert surgeons, accredited hospitals, exceptional care.
             </p>
@@ -55,7 +55,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link 
                     to={item.href} 
-                    className="text-primary-foreground/60 hover:text-accent transition-colors text-sm font-light"
+                    className="text-primary-foreground/70 hover:text-accent transition-colors text-sm font-light"
                   >
                     {item.name}
                   </Link>
@@ -74,7 +74,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link 
                     to={item.href} 
-                    className="text-primary-foreground/60 hover:text-accent transition-colors text-sm font-light"
+                    className="text-primary-foreground/70 hover:text-accent transition-colors text-sm font-light"
                   >
                     {item.name}
                   </Link>
@@ -89,7 +89,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link 
                     to={item.href} 
-                    className="text-primary-foreground/60 hover:text-accent transition-colors text-sm font-light"
+                    className="text-primary-foreground/70 hover:text-accent transition-colors text-sm font-light"
                   >
                     {item.name}
                   </Link>
@@ -106,7 +106,7 @@ const Footer = () => {
             <div className="flex items-start gap-3">
               <Phone className="w-4 h-4 text-accent mt-1 shrink-0" />
               <div>
-                <p className="text-primary-foreground/50 text-xs mb-1">Thailand</p>
+                <p className="text-primary-foreground/70 text-xs mb-1">Thailand</p>
                 <a 
                   href="tel:+66925590848" 
                   className="text-primary-foreground hover:text-accent transition-colors text-sm"
@@ -122,25 +122,25 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-primary-foreground/10">
         <div className="container py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-primary-foreground/40 text-xs tracking-wider">
+          <p className="text-primary-foreground/70 text-xs tracking-wider">
             © {new Date().getFullYear()} Cosmetic Surgery Thailand. All rights reserved.
           </p>
           <div className="flex items-center gap-8 text-xs tracking-wider">
             <Link 
               to="/privacy" 
-              className="text-primary-foreground/40 hover:text-accent transition-colors"
+              className="text-primary-foreground/70 hover:text-accent transition-colors"
             >
               Privacy
             </Link>
             <Link 
               to="/faq" 
-              className="text-primary-foreground/40 hover:text-accent transition-colors"
+              className="text-primary-foreground/70 hover:text-accent transition-colors"
             >
               FAQ
             </Link>
             <Link 
               to="/contact" 
-              className="text-primary-foreground/40 hover:text-accent transition-colors"
+              className="text-primary-foreground/70 hover:text-accent transition-colors"
             >
               Contact
             </Link>
