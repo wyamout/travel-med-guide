@@ -87,7 +87,7 @@ const HospitalPage = () => {
                     Free Consultation
                   </Button>
                 </Link>
-                <Link to="/surgeons">
+                <Link to={`/${hospital.location}/${hospital.slug}/surgeons`}>
                   <Button size="lg" variant="outline">
                     View Surgeons
                     <ArrowRight className="w-5 h-5 ml-2" />

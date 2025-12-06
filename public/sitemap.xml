@@ -206,10 +206,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://cosmeticsurgerythailand.com/bangkok/yanhee-international-hospital/surgeons</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://cosmeticsurgerythailand.com/bangkok/pai-clinic</loc>
     <lastmod>2025-12-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cosmeticsurgerythailand.com/bangkok/pai-clinic/surgeons</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://cosmeticsurgerythailand.com/bangkok/naravee-clinic</loc>
@@ -218,16 +230,34 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://cosmeticsurgerythailand.com/bangkok/naravee-clinic/surgeons</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://cosmeticsurgerythailand.com/bangkok/kamol-hospital</loc>
     <lastmod>2025-12-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://cosmeticsurgerythailand.com/bangkok/kamol-hospital/surgeons</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://cosmeticsurgerythailand.com/bangkok/bangpakok-hospital</loc>
     <lastmod>2025-12-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cosmeticsurgerythailand.com/bangkok/bangpakok-hospital/surgeons</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Phuket Hospitals -->
@@ -236,6 +266,12 @@
     <lastmod>2025-12-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cosmeticsurgerythailand.com/phuket/phuket-hospital/surgeons</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Samui Hospitals -->
@@ -246,10 +282,22 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://cosmeticsurgerythailand.com/samui/bangkok-hospital-samui/surgeons</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://cosmeticsurgerythailand.com/samui/samui-clinic</loc>
     <lastmod>2025-12-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cosmeticsurgerythailand.com/samui/samui-clinic/surgeons</loc>
+    <lastmod>2025-12-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Pattaya Hospitals -->
@@ -259,12 +307,10 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
-  <!-- Hua Hin Hospitals -->
   <url>
-    <loc>https://cosmeticsurgerythailand.com/hua-hin/san-paulo-hospital</loc>
+    <loc>https://cosmeticsurgerythailand.com/pattaya/bangkok-hospital-pattaya/surgeons</loc>
     <lastmod>2025-12-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>

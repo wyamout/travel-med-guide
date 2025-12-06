@@ -10,6 +10,7 @@ import ProcedurePage from "./pages/ProcedurePage";
 import ProceduresListPage from "./pages/ProceduresListPage";
 import HospitalsListPage from "./pages/HospitalsListPage";
 import HospitalPage from "./pages/HospitalPage";
+import HospitalSurgeonsPage from "./pages/HospitalSurgeonsPage";
 import ContactPage from "./pages/ContactPage";
 import FAQPage from "./pages/FAQPage";
 import CategoryPage from "./pages/CategoryPage";
@@ -56,12 +57,15 @@ const App = () => (
             {/* Hospital Pages */}
             <Route path="/hospitals/:slug" element={<HospitalPage />} />
             
-            {/* Hospital Pages */}
+            {/* Hospital Pages by Location */}
             <Route path="/bangkok/:slug" element={<HospitalPage />} />
+            <Route path="/bangkok/:slug/surgeons" element={<HospitalSurgeonsPage />} />
             <Route path="/phuket/:slug" element={<HospitalPage />} />
+            <Route path="/phuket/:slug/surgeons" element={<HospitalSurgeonsPage />} />
             <Route path="/samui/:slug" element={<HospitalPage />} />
+            <Route path="/samui/:slug/surgeons" element={<HospitalSurgeonsPage />} />
             <Route path="/pattaya/:slug" element={<HospitalPage />} />
-            <Route path="/hua-hin/:slug" element={<HospitalPage />} />
+            <Route path="/pattaya/:slug/surgeons" element={<HospitalSurgeonsPage />} />
             
             <Route path="*" element={<NotFound />} />
           </Routes>
