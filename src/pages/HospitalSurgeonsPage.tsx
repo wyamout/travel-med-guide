@@ -139,7 +139,7 @@ const HospitalSurgeonsPage = () => {
       {/* Surgeons Grid */}
       <section className="py-16 md:py-24">
         <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {surgeonsData.surgeons.map((surgeon, index) => (
               <SurgeonCard key={index} surgeon={surgeon} />
             ))}
