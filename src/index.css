@@ -154,7 +154,7 @@
   }
 
   .cta-button-outline {
-    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500;
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-cream transition-all duration-500;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     letter-spacing: 0.05em;
