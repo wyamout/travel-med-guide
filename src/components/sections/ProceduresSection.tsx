@@ -1,114 +1,102 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProceduresSection = () => {
   const procedures = [
     {
       title: "Rhinoplasty",
-      category: "Face Surgery",
-      description: "Expert nose reshaping for natural, harmonious results",
+      slug: "nose-surgery-thailand",
+      category: "Face",
+      description: "Expert nose reshaping for natural, harmonious facial balance",
       image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=600&auto=format&fit=crop",
-      price: "From $2,500",
     },
     {
-      title: "Breast Implants",
-      category: "Breast Surgery",
-      description: "Premium implants with experienced surgeons",
+      title: "Breast Augmentation",
+      slug: "breast-implants-thailand",
+      category: "Breast",
+      description: "Premium implants with internationally trained surgeons",
       image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600&auto=format&fit=crop",
-      price: "From $3,200",
     },
     {
       title: "Facelift",
-      category: "Face Surgery",
-      description: "Turn back time with natural anti-aging results",
+      slug: "full-facelift-thailand",
+      category: "Face",
+      description: "Refined techniques for natural, youthful rejuvenation",
       image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600&auto=format&fit=crop",
-      price: "From $4,500",
     },
     {
       title: "Liposuction",
-      category: "Body Surgery",
-      description: "Advanced Vaser technology for sculpted contours",
+      slug: "liposuction-thailand",
+      category: "Body",
+      description: "Advanced Vaser technology for sculpted, defined contours",
       image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop",
-      price: "From $2,800",
-    },
-    {
-      title: "Tummy Tuck",
-      category: "Body Surgery",
-      description: "Achieve a flat, toned abdomen",
-      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop",
-      price: "From $4,000",
-    },
-    {
-      title: "Eyelid Surgery",
-      category: "Face Surgery",
-      description: "Rejuvenate your eyes for a refreshed look",
-      image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?q=80&w=600&auto=format&fit=crop",
-      price: "From $1,800",
     },
   ];
 
   return (
-    <section id="procedures" className="py-24 bg-muted/30">
+    <section id="procedures" className="py-32 bg-background">
       <div className="container">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="trust-badge mb-4">Our Expertise</span>
-          <h2 className="section-title text-foreground mt-4">
-            Popular Cosmetic Procedures
+        <div className="max-w-3xl mb-20">
+          <p className="gold-accent flex items-center gap-3 mb-6">
+            <span className="w-12 h-px bg-accent" />
+            Our Expertise
+          </p>
+          <h2 className="section-title text-foreground mb-6">
+            Signature Procedures
           </h2>
-          <p className="section-subtitle mx-auto mt-4">
-            From subtle enhancements to transformative changes, our expert surgeons 
-            deliver natural-looking results that exceed expectations.
+          <p className="section-subtitle">
+            Each procedure is performed with meticulous attention to detail, 
+            combining surgical precision with an artistic eye for natural beauty.
           </p>
         </div>
 
-        {/* Procedures Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Procedures Grid - Asymmetric */}
+        <div className="grid lg:grid-cols-2 gap-8">
           {procedures.map((procedure, index) => (
-            <div
+            <Link
               key={procedure.title}
-              className="procedure-card group"
-              style={{ animationDelay: `${index * 100}ms` }}
+              to={`/${procedure.category.toLowerCase()}/${procedure.slug}`}
+              className="group relative overflow-hidden"
             >
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-[400px] overflow-hidden">
                 <img
                   src={procedure.image}
-                  alt={`${procedure.title} surgery in Thailand`}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  alt={`${procedure.title} in Thailand`}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-card/90 backdrop-blur-sm text-xs font-medium rounded-full text-foreground">
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
+                
+                {/* Content overlay */}
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <span className="text-xs tracking-widest uppercase text-primary-foreground/70 mb-2 block">
                     {procedure.category}
                   </span>
-                </div>
-                <div className="absolute bottom-4 right-4">
-                  <span className="px-4 py-2 bg-primary text-primary-foreground text-sm font-bold rounded-lg">
-                    {procedure.price}
+                  <h3 className="font-serif text-3xl text-primary-foreground mb-3">
+                    {procedure.title}
+                  </h3>
+                  <p className="text-primary-foreground/80 text-sm max-w-md mb-4">
+                    {procedure.description}
+                  </p>
+                  <span className="inline-flex items-center gap-2 text-accent text-sm tracking-wider uppercase font-medium">
+                    Discover More
+                    <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-2" />
                   </span>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-foreground mb-2">
-                  {procedure.title}
-                </h3>
-                <p className="text-muted-foreground mb-4">
-                  {procedure.description}
-                </p>
-                <Button variant="ghost" className="group/btn p-0 h-auto text-primary hover:text-primary">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover/btn:translate-x-1" />
-                </Button>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
 
-        {/* View All Button */}
-        <div className="text-center mt-12">
-          <Button variant="outline" size="lg">
-            View All Procedures
-            <ArrowRight className="w-4 h-4 ml-2" />
-          </Button>
+        {/* View All */}
+        <div className="flex justify-center mt-16">
+          <Link to="/procedures">
+            <Button variant="outline" size="lg" className="cta-button-outline px-12">
+              View All Procedures
+              <ArrowRight className="w-4 h-4 ml-3" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
