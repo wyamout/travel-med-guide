@@ -18,7 +18,7 @@ const hospitalContent: Record<string, HospitalContent> = {
       "The hospital's plastic surgery department offers a full range of procedures including rhinoplasty, breast augmentation, liposuction, and facial rejuvenation.",
       "All cosmetic surgeons at Yanhee are highly experienced and specialize in meeting international patient expectations with personalized care."
     ],
-    image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/Yanhee-Hospital.jpg"
+    image: "/images/hospitals/yanhee-hospital.jpg"
   },
   "pai-clinic": {
     metaTitle: "PAI Clinic Bangkok | Dr. Preecha Gender Surgery Thailand 2025",
@@ -30,7 +30,7 @@ const hospitalContent: Record<string, HospitalContent> = {
       "The clinic offers comprehensive MTF and FTM surgical services, as well as facial feminization surgery and other aesthetic procedures.",
       "PAI's experienced team provides compassionate, personalized care in a discreet and comfortable environment."
     ],
-    image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/PAI-Clinic.jpg"
+    image: "/images/hospitals/pai-clinic.jpg"
   },
   "naravee-clinic": {
     metaTitle: "Naravee Clinic Bangkok | Boutique Cosmetic Surgery Thailand 2025",
@@ -42,7 +42,7 @@ const hospitalContent: Record<string, HospitalContent> = {
       "Specializing in facial procedures, breast surgery, and body contouring, Naravee combines Thai hospitality with world-class medical care.",
       "The clinic's modern facilities and dedicated patient coordinators ensure a comfortable experience from consultation to recovery."
     ],
-    image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/Naravee-Clinic.jpg"
+    image: "/images/hospitals/naravee-clinic.jpg"
   },
   "kamol-hospital": {
     metaTitle: "Kamol Hospital Bangkok | MTF FTM Surgery Thailand 2025",
@@ -54,7 +54,7 @@ const hospitalContent: Record<string, HospitalContent> = {
       "The JCI-accredited facility offers comprehensive MTF and FTM surgical packages with dedicated international patient services.",
       "Patients receive personalized care from consultation through recovery, with multilingual staff available 24/7."
     ],
-    image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/Kamol-Hospital.jpg"
+    image: "/images/hospitals/kamol-hospital.jpg"
   },
   "bangpakok-hospital": {
     metaTitle: "Bangpakok 9 Hospital Bangkok | Cosmetic Surgery Thailand 2025",
@@ -66,7 +66,7 @@ const hospitalContent: Record<string, HospitalContent> = {
       "With modern facilities and international patient coordinators, Bangpakok provides seamless care for medical tourists.",
       "The hospital offers competitive pricing and comprehensive packages including accommodation and airport transfers."
     ],
-    image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/Bangpakok-Hospital.jpg"
+    image: "/images/hospitals/bangpakok-hospital.jpg"
   },
   "phuket-hospital": {
     metaTitle: "Phuket Hospital PIAC | Cosmetic Surgery Phuket Thailand 2025",
@@ -78,7 +78,7 @@ const hospitalContent: Record<string, HospitalContent> = {
       "The plastic surgery center in Phuket's International Hospital, also known as PIAC, is considered one of the most advanced and state-of-the-art plastic surgery centers in Thailand.",
       "It is headed by some of the finest cosmetic surgeons in Thailand who are highly experienced and skilled. All plastic surgeons at Phuket International Hospital are board certified and specialized to meet your expectations."
     ],
-    image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/Phuket-Hospital.jpg"
+    image: "/images/hospitals/phuket-hospital.jpg"
   },
   "bangkok-hospital-samui": {
     metaTitle: "Bangkok Hospital Samui | Cosmetic Surgery Koh Samui 2025",
@@ -90,7 +90,7 @@ const hospitalContent: Record<string, HospitalContent> = {
       "Patients can combine their surgical journey with recovery in one of Thailand's most stunning tropical destinations.",
       "The JCI-accredited facility features modern equipment and international patient services for seamless care."
     ],
-    image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/Bangkok-Hospital-Samui.jpg"
+    image: "/images/hospitals/bangkok-hospital-samui.jpg"
   },
   "bangkok-hospital-pattaya": {
     metaTitle: "Bangkok Hospital Pattaya | Cosmetic Surgery Pattaya Thailand 2025",
@@ -102,7 +102,7 @@ const hospitalContent: Record<string, HospitalContent> = {
       "The hospital serves as a premier destination for medical tourists seeking quality care in a convenient beach location.",
       "International patient services include multilingual staff, airport transfers, and accommodation arrangements."
     ],
-    image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/Bangkok-Hospital-Pattaya.jpg"
+    image: "/images/hospitals/bangkok-hospital-pattaya.jpg"
   },
   "san-paulo-hospital": {
     metaTitle: "San Paulo Hospital Hua Hin | Cosmetic Surgery Thailand 2025",
