@@ -15,27 +15,27 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
           <div className="space-y-10">
-            <div className="space-y-2">
+            <div className="space-y-2 animate-fade-up">
               <p className="gold-accent flex items-center gap-2">
                 <span className="w-8 h-px bg-accent" />
                 Thailand's Premier Destination
               </p>
             </div>
 
-            <h1 className="section-title text-foreground">
+            <h1 className="section-title text-foreground animate-fade-up stagger-1">
               The Art of
               <span className="block text-accent italic">Transformation</span>
             </h1>
 
-            <p className="section-subtitle">
+            <p className="section-subtitle animate-fade-up stagger-2">
               Experience world-renowned cosmetic surgery at Thailand's most prestigious hospitals. 
               Our board-certified surgeons combine artistry with precision to deliver 
               exceptional, natural results.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-up stagger-3">
               <Link to="/contact">
-                <Button size="lg" className="cta-button px-10 py-6">
+                <Button size="lg" className="cta-button px-10 py-6 hover-glow">
                   Request Consultation
                 </Button>
               </Link>
@@ -47,7 +47,7 @@ const HeroSection = () => {
             </div>
 
             {/* Subtle trust indicators */}
-            <div className="flex flex-wrap gap-8 pt-8 border-t border-border/50">
+            <div className="flex flex-wrap gap-8 pt-8 border-t border-border/50 animate-fade-up stagger-4">
               <div className="flex items-center gap-3">
                 <Shield className="w-5 h-5 text-accent" />
                 <span className="text-sm text-muted-foreground">JCI Accredited</span>
@@ -64,7 +64,7 @@ const HeroSection = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="relative">
+          <div className="relative animate-blur-in stagger-2">
             <div className="relative">
               {/* Main image frame */}
               <div className="relative overflow-hidden">
@@ -77,7 +77,7 @@ const HeroSection = () => {
               </div>
 
               {/* Elegant overlay card */}
-              <div className="absolute -bottom-8 -left-8 bg-card border border-border/50 p-8 shadow-elegant max-w-sm">
+              <div className="absolute -bottom-8 -left-8 bg-card border border-border/50 p-8 shadow-elegant max-w-sm animate-slide-in-left stagger-5">
                 <p className="gold-accent mb-3">Excellence in Every Detail</p>
                 <p className="text-foreground font-serif text-2xl leading-snug">
                   "Where medical precision meets aesthetic artistry"
@@ -85,7 +85,7 @@ const HeroSection = () => {
               </div>
 
               {/* Stats card */}
-              <div className="absolute -top-6 -right-6 bg-primary text-primary-foreground p-6">
+              <div className="absolute -top-6 -right-6 bg-primary text-primary-foreground p-6 animate-scale-in stagger-4">
                 <div className="text-center">
                   <div className="font-serif text-4xl font-medium">50K+</div>
                   <div className="text-xs tracking-widest uppercase opacity-80 mt-1">
