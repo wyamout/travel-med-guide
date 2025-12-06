@@ -10,28 +10,28 @@ const ProceduresSection = () => {
       slug: "nose-surgery-thailand",
       category: "Face",
       description: "Expert nose reshaping for natural, harmonious facial balance",
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=600&auto=format&fit=crop",
+      image: "/images/70f7d878b485b34401d8aaf9491ab3c3.jpg",
     },
     {
       title: "Breast Augmentation",
       slug: "breast-implants-thailand",
       category: "Breast",
       description: "Premium implants with internationally trained surgeons",
-      image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600&auto=format&fit=crop",
+      image: "/images/d4fc96e6760987d76a3a855b966dabc4.jpg",
     },
     {
       title: "Facelift",
       slug: "full-facelift-thailand",
       category: "Face",
       description: "Refined techniques for natural, youthful rejuvenation",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=600&auto=format&fit=crop",
+      image: "/images/83c0d9e7967d42d583244d25fe63d245.jpg",
     },
     {
       title: "Liposuction",
       slug: "liposuction-thailand",
       category: "Body",
       description: "Advanced Vaser technology for sculpted, defined contours",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop",
+      image: "/images/15d6370e19c5d7b4ad061c78599c54b0.jpg",
     },
   ];
 
