@@ -63,7 +63,7 @@ const CTASection = () => {
 
           {/* Form */}
           <AnimatedSection animation="fade-right" delay={200}>
-            <div className="bg-card border border-border/50 p-10 shadow-elegant">
+            <div className="bg-white border border-border p-10 shadow-lg">
               <h3 className="font-serif text-2xl text-foreground mb-2">
                 Get Your Free Quote
               </h3>
@@ -80,7 +80,7 @@ const CTASection = () => {
                     <Input 
                       type="text" 
                       placeholder="John" 
-                      className="rounded-none border-border bg-background"
+                      className="rounded-none border-border bg-muted/30 focus:bg-white"
                     />
                   </div>
                   <div>
@@ -90,7 +90,7 @@ const CTASection = () => {
                     <Input 
                       type="text" 
                       placeholder="Doe" 
-                      className="rounded-none border-border bg-background"
+                      className="rounded-none border-border bg-muted/30 focus:bg-white"
                     />
                   </div>
                 </div>
@@ -102,7 +102,7 @@ const CTASection = () => {
                   <Input 
                     type="email" 
                     placeholder="john@example.com" 
-                    className="rounded-none border-border bg-background"
+                    className="rounded-none border-border bg-muted/30 focus:bg-white"
                   />
                 </div>
 
@@ -113,7 +113,7 @@ const CTASection = () => {
                   <Input 
                     type="tel" 
                     placeholder="+1 234 567 8900" 
-                    className="rounded-none border-border bg-background"
+                    className="rounded-none border-border bg-muted/30 focus:bg-white"
                   />
                 </div>
 
@@ -121,7 +121,7 @@ const CTASection = () => {
                   <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
                     Procedure of Interest
                   </label>
-                  <select className="w-full px-4 py-2.5 border border-border bg-background text-foreground focus:outline-none focus:ring-1 focus:ring-accent transition-all text-sm">
+                  <select className="w-full px-4 py-2.5 border border-border bg-muted/30 text-foreground focus:outline-none focus:ring-1 focus:ring-accent focus:bg-white transition-all text-sm">
                     <option value="">Select a procedure</option>
                     <option value="rhinoplasty">Rhinoplasty</option>
                     <option value="breast-augmentation">Breast Augmentation</option>
@@ -139,7 +139,7 @@ const CTASection = () => {
                   <Textarea
                     rows={3}
                     placeholder="Tell us about your goals..."
-                    className="rounded-none border-border bg-background resize-none"
+                    className="rounded-none border-border bg-muted/30 focus:bg-white resize-none"
                   />
                 </div>
 
