@@ -104,10 +104,15 @@ const QuickConsultationForm = ({
 
       {showProcedureSelect && !procedure && (
         <div>
-          <label className="block text-xs tracking-wider uppercase text-muted-foreground mb-2">
+          <label 
+            htmlFor="procedure-select"
+            className="block text-xs tracking-wider uppercase text-muted-foreground mb-2"
+          >
             Procedure of Interest
           </label>
           <select 
+            id="procedure-select"
+            aria-label="Select a procedure"
             className="w-full px-4 py-2.5 border border-border bg-muted/30 text-foreground focus:outline-none focus:ring-1 focus:ring-accent focus:bg-white transition-all text-sm"
             value={formData.procedure}
             onChange={(e) => setFormData(prev => ({ ...prev, procedure: e.target.value }))}
