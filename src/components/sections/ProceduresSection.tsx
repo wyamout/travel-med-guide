@@ -2,9 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
-import procedureFace from "@/assets/procedure-face.jpg";
-import procedureBreast from "@/assets/procedure-breast.jpg";
-import procedureBody from "@/assets/procedure-body.jpg";
+import procedureRhinoplasty from "@/assets/procedure-rhinoplasty.jpg";
+import procedureFacelift from "@/assets/procedure-facelift.jpg";
+import procedureBreast from "@/assets/procedure-breast-real.jpg";
+import procedureBody from "@/assets/procedure-body-real.jpg";
 
 const ProceduresSection = () => {
   const procedures = [
@@ -13,7 +14,7 @@ const ProceduresSection = () => {
       slug: "nose-surgery-thailand",
       category: "Face",
       description: "Expert nose reshaping for natural, harmonious facial balance",
-      image: procedureFace,
+      image: procedureRhinoplasty,
     },
     {
       title: "Breast Augmentation",
@@ -27,7 +28,7 @@ const ProceduresSection = () => {
       slug: "full-facelift-thailand",
       category: "Face",
       description: "Refined techniques for natural, youthful rejuvenation",
-      image: procedureFace,
+      image: procedureFacelift,
     },
     {
       title: "Liposuction",
