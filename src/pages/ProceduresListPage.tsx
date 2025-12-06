@@ -75,7 +75,7 @@ const ProceduresListPage = () => {
                 {category.procedures.map((procedure) => (
                   <Link
                     key={procedure.id}
-                    to={`/${procedure.category}/${procedure.slug}`}
+                    to={`/${procedure.category === "other" ? "srs" : procedure.category}/${procedure.slug}`}
                     className="procedure-card p-6 group"
                   >
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">

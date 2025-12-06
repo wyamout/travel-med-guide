@@ -53,6 +53,7 @@ const App = () => (
             <Route path="/breast/:slug" element={<ProcedurePage />} />
             <Route path="/body/:slug" element={<ProcedurePage />} />
             <Route path="/srs/:slug" element={<ProcedurePage />} />
+            <Route path="/other/:slug" element={<ProcedurePage />} />
             
             {/* Hospital Pages */}
             <Route path="/hospitals/:slug" element={<HospitalPage />} />
