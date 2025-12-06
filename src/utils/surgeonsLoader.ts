@@ -3,7 +3,7 @@
 export interface Surgeon {
   name: string;
   fullName: string;
-  image: string;
+  image: string | null; // null means no image available
   specialties: string;
   languages: string;
   education: string;
@@ -22,6 +22,18 @@ export interface HospitalSurgeons {
   surgeons: Surgeon[];
 }
 
+// Mapping from surgeon names to local image filenames in /public/images/
+const surgeonImageMap: Record<string, string> = {
+  // Yanhee Hospital
+  "Dr. Pitch": "/images/9556033bee8430fba82e16ebbfa91b0e.jpg",
+  // PAI Clinic
+  "Dr. Preecha": "/images/1b8c1586ce3f9efe98b925fc9ad076a7.jpg",
+  // Phuket Hospital
+  "Dr. Sanguan": "/images/aeb37b29ac80dafd6ca11d94dcc38c88.jpg",
+  // Naravee Clinic
+  "Dr. Ronnachai": "/images/5b6a7d77b5f65cd74d6c7c70302eebaa.png",
+};
+
 const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
   "yanhee-international-hospital": {
     hospitalName: "Yanhee International Hospital",
@@ -33,7 +45,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Pitch",
         fullName: "Dr. Pitch Paiboonkasemsutthi",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-pitch.jpg",
+        image: surgeonImageMap["Dr. Pitch"] || null,
         specialties: "Plastic Surgery",
         languages: "Thai, English",
         education: "Doctor of Medicine, Chulalongkorn University, Thailand, 1985",
@@ -45,7 +57,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Pramote",
         fullName: "Dr. Pramote Manurangsee",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-pramote.jpg",
+        image: null,
         specialties: "Plastic Surgery, Microsurgery",
         languages: "Thai, English",
         education: "Doctor of Medicine, Chulalongkorn University, Thailand, 1987",
@@ -57,7 +69,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Sanit",
         fullName: "Dr. Sanit Pongkapanakai",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-sanit.jpg",
+        image: null,
         specialties: "Plastic Surgery",
         languages: "Thai, English, Mandarin",
         education: "Doctor of Medicine, Virgin Milagrosa University, Philippines, 1988",
@@ -69,7 +81,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Somboon",
         fullName: "Dr. Somboon Waiprib",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-somboon.jpg",
+        image: null,
         specialties: "Plastic Surgery",
         languages: "Thai, English",
         education: "Doctor of Medicine, Chulalongkorn University, Thailand, 1989",
@@ -81,7 +93,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Greechart",
         fullName: "Dr. Greechart Rungsinaporn",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-greechart.jpg",
+        image: null,
         specialties: "Plastic Surgery",
         languages: "Thai, English",
         education: "Doctor of Medicine, Chulalongkorn University, Thailand, 1985",
@@ -93,7 +105,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Wichian",
         fullName: "Dr. Wichian Sitthicharoenchai",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-wichian.jpg",
+        image: null,
         specialties: "Plastic Surgery",
         languages: "Thai, English",
         education: "Doctor of Medicine, Khon Kaen University, Thailand, 1986",
@@ -114,7 +126,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Preecha",
         fullName: "Dr. Preecha Tiewtranon",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-preecha.jpg",
+        image: surgeonImageMap["Dr. Preecha"] || null,
         specialties: "Plastic Surgery, Gender Reassignment Surgery",
         languages: "Thai, English",
         education: "M.D. Chulalongkorn University, Surgery Resident New York Hospital, Roswell Park Memorial Institute USA",
@@ -126,7 +138,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Apichai",
         fullName: "Dr. Apichai Angspatt",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-apichai.jpg",
+        image: null,
         specialties: "Plastic Surgery",
         languages: "Thai, English",
         education: "Medical Doctor, Faculty of Medicine, Chulalongkorn University, 1987",
@@ -138,7 +150,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Burin",
         fullName: "Dr. Burin Wangjiraniran",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-burin.jpg",
+        image: null,
         specialties: "Plastic Surgery, Burns",
         languages: "Thai, English",
         education: "MD Faculty of Medicine Chulalongkorn University 1994",
@@ -150,7 +162,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Prayuth",
         fullName: "Dr. Prayuth Chokrungvaranont",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-prayuth.jpg",
+        image: null,
         specialties: "Plastic Surgery, Sex Reassignment Surgery",
         languages: "Thai, English",
         education: "Chulalongkorn University Medical School 1982",
@@ -162,7 +174,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Prapat",
         fullName: "Dr. Prapat Visalyaputra",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-prapat.jpg",
+        image: null,
         specialties: "Plastic Surgery, Craniofacial Surgery",
         languages: "Thai, English",
         education: "Doctor of Medicine, Chiangmai University 1973-1979",
@@ -183,7 +195,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Sanguan",
         fullName: "Dr. Sanguan Kunaporn",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-sanguan.jpg",
+        image: surgeonImageMap["Dr. Sanguan"] || null,
         specialties: "Plastic Surgery, Gender Reassignment Surgery, Breast Surgery",
         languages: "Thai, English",
         education: "Chulalongkorn University Medical School 1978-1984",
@@ -195,7 +207,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Veerawat",
         fullName: "Dr. Veerawat Tirananmongkol",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-veerawat.jpg",
+        image: null,
         specialties: "Facial Surgery, Breast Surgery, Body Contouring",
         languages: "Thai, English",
         education: "Chulalongkorn University Medical School 1988-1994 (2nd Class Honors)",
@@ -207,7 +219,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Songyos",
         fullName: "Dr. Songyos Chantajitr",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-songyos.jpg",
+        image: null,
         specialties: "Breast Surgery, Liposuction, Rhinoplasty, Face Lift",
         languages: "Thai, English",
         education: "Medical School, Srinakarinwirot University 1993-1999",
@@ -219,7 +231,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Thanakom",
         fullName: "Dr. Thanakom Laisakul",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-thanakom.jpg",
+        image: null,
         specialties: "Breast Surgery, Body Contouring, Face Lift",
         languages: "Thai, English",
         education: "Medical School, Ramathibodi Hospital, Mahidol University 1988-1994",
@@ -231,7 +243,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Rushapol",
         fullName: "Dr. Rushapol Sdawat",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-rushapol.jpg",
+        image: null,
         specialties: "Plastic Surgery, Laser Surgery",
         languages: "Thai, English",
         education: "Siriraj Medical School, Mahidol University 1985-1992",
@@ -250,16 +262,16 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
     introduction: "Our surgeons at Naravee Clinic provide personalized aesthetic care with decades of combined experience in cosmetic surgery.",
     surgeons: [
       {
-        name: "Dr. Naravee",
-        fullName: "Dr. Naravee",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/naravee-clinic.jpg",
-        specialties: "Facial Surgery, Breast Surgery, Body Contouring",
+        name: "Dr. Ronnachai",
+        fullName: "Dr. Ronnachai Komolvanich",
+        image: surgeonImageMap["Dr. Ronnachai"] || null,
+        specialties: "Vaser Liposuction, Body Contouring, Facial Surgery",
         languages: "Thai, English",
-        education: "Board Certified Plastic Surgeon",
-        credentials: "Member Society of Plastic Surgeons of Thailand",
-        training: "Extensive training in aesthetic surgery",
-        experience: "Founder of Naravee Clinic",
-        casesPerformed: "Thousands of successful cosmetic procedures"
+        education: "Ramathibodi Hospital, Mahidol University",
+        credentials: "Diplomate Thai Board of Surgery, Diplomate Thai Board of Plastic Surgery",
+        training: "Fellowship in Plastic Surgery USA, UK, Singapore, Thailand",
+        experience: "Founder of Naravee Clinic, Pioneer of Vaser in Thailand",
+        casesPerformed: "Thousands of successful Vaser and cosmetic procedures"
       }
     ]
   },
@@ -273,7 +285,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Kamol",
         fullName: "Dr. Kamol Pansritum",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/dr-kamol.jpg",
+        image: null,
         specialties: "Gender Reassignment Surgery, Facial Feminization, Plastic Surgery",
         languages: "Thai, English",
         education: "Board Certified Plastic Surgeon",
@@ -294,7 +306,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Bangpakok Surgeons",
         fullName: "Board Certified Plastic Surgeons",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/bangpakok-hospital.jpg",
+        image: null,
         specialties: "Facial Surgery, Breast Surgery, Body Contouring",
         languages: "Thai, English",
         education: "Board Certified Plastic Surgeons",
@@ -315,7 +327,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Samui Surgeons",
         fullName: "Board Certified Plastic Surgeons",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/bangkok-hospital-samui.jpg",
+        image: null,
         specialties: "Facial Surgery, Breast Surgery, Body Contouring",
         languages: "Thai, English",
         education: "Board Certified Plastic Surgeons",
@@ -336,7 +348,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Samui Clinic Surgeons",
         fullName: "Board Certified Plastic Surgeons",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/samui-clinic.jpg",
+        image: null,
         specialties: "Facial Surgery, Breast Surgery, Body Contouring",
         languages: "Thai, English",
         education: "Board Certified Plastic Surgeons",
@@ -357,7 +369,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Pattaya Surgeons",
         fullName: "Board Certified Plastic Surgeons",
-        image: "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/bangkok-hospital-pattaya.jpg",
+        image: null,
         specialties: "Facial Surgery, Breast Surgery, Body Contouring",
         languages: "Thai, English",
         education: "Board Certified Plastic Surgeons",

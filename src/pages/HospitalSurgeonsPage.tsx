@@ -17,16 +17,15 @@ import { Link } from "react-router-dom";
 
 const SurgeonCard = ({ surgeon }: { surgeon: Surgeon }) => (
   <div className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-    <div className="aspect-[3/4] bg-muted relative overflow-hidden">
-      <img 
-        src={surgeon.image} 
-        alt={surgeon.fullName}
-        className="w-full h-full object-cover object-top"
-        onError={(e) => {
-          e.currentTarget.src = "https://cosmetic.gumlet.io/wp-content/uploads/2015/05/blank.png";
-        }}
-      />
-    </div>
+    {surgeon.image && (
+      <div className="aspect-[3/4] bg-muted relative overflow-hidden">
+        <img 
+          src={surgeon.image} 
+          alt={surgeon.fullName}
+          className="w-full h-full object-cover object-top"
+        />
+      </div>
+    )}
     <div className="p-6 space-y-4">
       <div>
         <h3 className="text-xl font-semibold">{surgeon.fullName}</h3>
