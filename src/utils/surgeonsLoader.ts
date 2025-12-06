@@ -37,10 +37,16 @@ const surgeonImageMap: Record<string, string> = {
   "Dr. Vitawat": "/images/surgeons/dr-vitawat.jpg",
   // PAI Clinic
   "Dr. Preecha": "/images/surgeons/dr-preecha.jpg",
+  "Dr. Apichai": "/images/surgeons/dr-apichai.jpg",
+  "Dr. Burin": "/images/surgeons/dr-burin.jpg",
+  "Dr. Prayuth": "/images/surgeons/dr-prayuth.jpg",
+  "Dr. Prapat": "/images/surgeons/dr-prapat.jpg",
   // Phuket Hospital
   "Dr. Sanguan": "/images/surgeons/dr-sanguan.jpg",
   // Naravee Clinic
   "Dr. Ronnachai": "/images/surgeons/dr-ronnachai.png",
+  // Kamol Hospital
+  "Dr. Kamol": "/images/surgeons/dr-kamol.jpg",
 };
 
 const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
@@ -195,7 +201,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Apichai",
         fullName: "Dr. Apichai Angspatt",
-        image: null,
+        image: surgeonImageMap["Dr. Apichai"] || null,
         specialties: "Plastic Surgery",
         languages: "Thai, English",
         education: "Medical Doctor, Faculty of Medicine, Chulalongkorn University, 1987",
@@ -207,7 +213,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Burin",
         fullName: "Dr. Burin Wangjiraniran",
-        image: null,
+        image: surgeonImageMap["Dr. Burin"] || null,
         specialties: "Plastic Surgery, Burns",
         languages: "Thai, English",
         education: "MD Faculty of Medicine Chulalongkorn University 1994",
@@ -219,7 +225,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Prayuth",
         fullName: "Dr. Prayuth Chokrungvaranont",
-        image: null,
+        image: surgeonImageMap["Dr. Prayuth"] || null,
         specialties: "Plastic Surgery, Sex Reassignment Surgery",
         languages: "Thai, English",
         education: "Chulalongkorn University Medical School 1982",
@@ -231,7 +237,7 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Prapat",
         fullName: "Dr. Prapat Visalyaputra",
-        image: null,
+        image: surgeonImageMap["Dr. Prapat"] || null,
         specialties: "Plastic Surgery, Craniofacial Surgery",
         languages: "Thai, English",
         education: "Doctor of Medicine, Chiangmai University 1973-1979",
@@ -342,14 +348,14 @@ const hospitalSurgeonsData: Record<string, HospitalSurgeons> = {
       {
         name: "Dr. Kamol",
         fullName: "Dr. Kamol Pansritum",
-        image: null,
+        image: surgeonImageMap["Dr. Kamol"] || null,
         specialties: "Gender Reassignment Surgery, Facial Feminization, Plastic Surgery",
         languages: "Thai, English",
-        education: "Board Certified Plastic Surgeon",
-        credentials: "JCI Accredited, International recognition in gender surgery",
-        training: "Pioneer in MTF and FTM surgical techniques",
-        experience: "Founder of Kamol Cosmetic Hospital, 20+ years experience",
-        casesPerformed: "Thousands of successful gender confirmation surgeries"
+        education: "Doctor of Medicine, Khonkaen University, 1986",
+        credentials: "Member Board of Plastic Surgery FRCST, Society of Plastic and Reconstructive Surgeons of Thailand, ISAPS Member",
+        training: "Member of the Council of General Surgery FRCST 1992, Member of the Board of Plastic Surgery FRCST 1997",
+        experience: "Founder of Kamol Cosmetic Hospital, 4000+ transgender procedures since 1997",
+        casesPerformed: "SRS procedures: 4,000+ | Facial Feminization: 1,000+ | All cosmetic procedures: 10,000+"
       }
     ]
   },
