@@ -8,6 +8,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Phone } from "lucide-react";
 import { Link } from "react-router-dom";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
+import { FAQPageSchema } from "@/components/seo/JsonLd";
 
 const FAQPage = () => {
   const faqs = [
@@ -89,6 +91,9 @@ const FAQPage = () => {
     },
   ];
 
+  // Flatten all FAQ items for schema
+  const allFaqItems = faqs.flatMap((section) => section.questions);
+
   return (
     <PageLayout
       title="Frequently Asked Questions | Cosmetic Surgery Thailand"
@@ -96,17 +101,24 @@ const FAQPage = () => {
       keywords="cosmetic surgery thailand faq, plastic surgery thailand questions, medical tourism thailand"
       canonicalUrl="https://cosmeticsurgerythailand.com/faq"
     >
+      <FAQPageSchema faqs={allFaqItems} />
+
       {/* Hero */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-        <div className="container text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            Frequently Asked
-            <span className="block text-primary">Questions</span>
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Get answers to the most common questions about cosmetic surgery in
-            Thailand. Can't find what you're looking for? Contact us directly.
-          </p>
+        <div className="container">
+          <div className="mb-8">
+            <Breadcrumbs items={[{ name: "FAQ", href: "/faq" }]} />
+          </div>
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+              Frequently Asked
+              <span className="block text-primary">Questions</span>
+            </h1>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Get answers to the most common questions about cosmetic surgery in
+              Thailand. Can't find what you're looking for? Contact us directly.
+            </p>
+          </div>
         </div>
       </section>
 
