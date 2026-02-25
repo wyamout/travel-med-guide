@@ -15,7 +15,7 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Cosmetic Surgery Thailand | Best Plastic Surgery Bangkok {CURRENT_YEAR}</title>
+        <title>{`Cosmetic Surgery Thailand | Best Plastic Surgery Bangkok ${CURRENT_YEAR}`}</title>
         <meta
           name="description"
           content={`Top-rated cosmetic surgery in Thailand. Expert surgeons, world-class hospitals in Bangkok, Phuket, Samui. Free consultation. Best prices ${CURRENT_YEAR}. Book now!`}
