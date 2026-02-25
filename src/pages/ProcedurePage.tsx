@@ -7,6 +7,9 @@ import { Check, Phone, Clock, Shield, Award, ArrowRight, Calendar, Building2 } f
 import { Link } from "react-router-dom";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import QuickConsultationForm from "@/components/forms/QuickConsultationForm";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
+import { MedicalProcedureSchema } from "@/components/seo/JsonLd";
+import MedicalDisclaimer from "@/components/seo/MedicalDisclaimer";
 
 const ProcedurePage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -32,27 +35,55 @@ const ProcedurePage = () => {
     );
   }
 
-  const categoryLabels = {
+  const categoryLabels: Record<string, string> = {
     face: "Face Surgery",
     breast: "Breast Surgery",
     body: "Body Surgery",
     other: "Specialized Surgery",
   };
 
+  const categoryPaths: Record<string, string> = {
+    face: "/face",
+    breast: "/breast",
+    body: "/body",
+    other: "/procedures",
+  };
+
   const relatedProcedures = allProcedures
     .filter((p) => p.category === procedure.category && p.id !== procedure.id)
     .slice(0, 3);
+
+  const breadcrumbItems = [
+    { name: "Procedures", href: "/procedures" },
+    { name: categoryLabels[procedure.category], href: categoryPaths[procedure.category] },
+    { name: procedure.name, href: `/${procedure.category}/${procedure.slug}` },
+  ];
 
   return (
     <PageLayout
       title={content?.metaTitle || `${procedure.name} Thailand | Bangkok & Phuket`}
       description={content?.metaDescription || `Expert ${procedure.name.toLowerCase()} in Thailand. Board-certified surgeons, JCI hospitals. Save 60-70%. Free consultation.`}
       keywords={`${procedure.name.toLowerCase()} thailand, ${procedure.name.toLowerCase()} bangkok, cosmetic surgery thailand`}
-      canonicalUrl={`https://cosmeticsurgerythailand.com/procedures/${procedure.slug}`}
+      canonicalUrl={`https://cosmeticsurgerythailand.com/${procedure.category}/${procedure.slug}`}
     >
+      <MedicalProcedureSchema
+        name={`${procedure.name} in Thailand`}
+        description={content?.metaDescription || procedure.shortDescription}
+        url={`/${procedure.category}/${procedure.slug}`}
+        bodyLocation={procedure.category === "face" ? "Face" : procedure.category === "breast" ? "Breast" : "Body"}
+      />
+
       {/* Hero Section with Sticky Form */}
       <section className="pt-32 pb-16 bg-primary text-primary-foreground">
         <div className="container">
+          {/* Breadcrumbs */}
+          <div className="mb-8">
+            <Breadcrumbs
+              items={breadcrumbItems}
+              className="text-primary-foreground/60 [&_a]:text-primary-foreground/60 [&_a:hover]:text-accent [&_span.font-medium]:text-primary-foreground [&_svg]:text-primary-foreground/40"
+            />
+          </div>
+
           <div className="grid lg:grid-cols-5 gap-12 items-start">
             {/* Content - 3 columns */}
             <div className="lg:col-span-3 space-y-6">
@@ -72,7 +103,7 @@ const ProcedurePage = () => {
 
               <AnimatedSection animation="fade-up" delay={200}>
                 <p className="text-primary-foreground/70 text-lg leading-relaxed max-w-xl">
-                  {procedure.shortDescription}. Expert surgeons at JCI-accredited 
+                  {procedure.shortDescription}. Expert surgeons at JCI-accredited
                   hospitals in Bangkok, Phuket, and Samui.
                 </p>
               </AnimatedSection>
@@ -149,10 +180,9 @@ const ProcedurePage = () => {
                     Receive surgeon feedback within 24 hours
                   </p>
                 </div>
-
-                <QuickConsultationForm 
-                  procedure={procedure.name} 
-                  showProcedureSelect={false} 
+                <QuickConsultationForm
+                  procedure={procedure.name}
+                  showProcedureSelect={false}
                 />
               </div>
             </AnimatedSection>
@@ -181,6 +211,11 @@ const ProcedurePage = () => {
                     </div>
                   </article>
                 </AnimatedSection>
+
+                {/* Medical Disclaimer */}
+                <div className="mt-12">
+                  <MedicalDisclaimer procedureName={procedure.name} />
+                </div>
               </div>
 
               {/* Sidebar */}
@@ -223,10 +258,10 @@ const ProcedurePage = () => {
                     <div className="mt-6 pt-6 border-t border-border">
                       <h4 className="text-sm font-medium text-foreground mb-3">Available Locations</h4>
                       <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li>• Bangkok</li>
-                        <li>• Phuket</li>
-                        <li>• Koh Samui</li>
-                        <li>• Pattaya</li>
+                        <li><Link to="/bangkok/yanhee-international-hospital" className="hover:text-accent transition-colors">• Bangkok</Link></li>
+                        <li><Link to="/phuket/phuket-hospital" className="hover:text-accent transition-colors">• Phuket</Link></li>
+                        <li><Link to="/samui/bangkok-hospital-samui" className="hover:text-accent transition-colors">• Koh Samui</Link></li>
+                        <li><Link to="/pattaya/bangkok-hospital-pattaya" className="hover:text-accent transition-colors">• Pattaya</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -318,7 +353,7 @@ const ProcedurePage = () => {
               {relatedProcedures.map((related, index) => (
                 <AnimatedSection key={related.id} animation="fade-up" delay={100 + index * 100}>
                   <Link
-                    to={`/procedures/${related.slug}`}
+                    to={`/${related.category}/${related.slug}`}
                     className="bg-muted/30 border border-border p-6 block hover:border-accent/30 transition-colors group"
                   >
                     <h3 className="font-serif text-xl text-foreground mb-2 group-hover:text-accent transition-colors">
@@ -347,7 +382,7 @@ const ProcedurePage = () => {
               Start Your {procedure.name} Journey Today
             </h2>
             <p className="text-primary-foreground/70 mb-8 max-w-2xl mx-auto">
-              Get a free, no-obligation consultation with our expert team. 
+              Get a free, no-obligation consultation with our expert team.
               We'll match you with the perfect surgeon for your goals.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">

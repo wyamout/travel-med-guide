@@ -1,4 +1,5 @@
 import PageLayout from "@/components/layout/PageLayout";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 import { 
   faceProcedures, 
   breastProcedures, 
@@ -46,7 +47,14 @@ const ProceduresListPage = () => {
       <section className="py-16 md:py-24 bg-primary relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] opacity-10" />
         <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/95 to-primary-foreground/20" />
-        <div className="container text-center relative z-10">
+        <div className="container relative z-10">
+          <div className="mb-8">
+            <Breadcrumbs
+              items={[{ name: "Procedures", href: "/procedures" }]}
+              className="text-primary-foreground/60 [&_a]:text-primary-foreground/60 [&_a:hover]:text-accent [&_span.font-medium]:text-primary-foreground [&_svg]:text-primary-foreground/40"
+            />
+          </div>
+          <div className="text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-primary-foreground">
             Cosmetic Surgery
             <span className="block text-accent">Procedures</span>
@@ -56,6 +64,7 @@ const ProceduresListPage = () => {
             performed by board-certified surgeons at JCI-accredited hospitals
             across Thailand.
           </p>
+          </div>
         </div>
       </section>
 

@@ -2,6 +2,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import { Phone, Clock, Shield, Check } from "lucide-react";
 import MultiStepContactForm from "@/components/forms/MultiStepContactForm";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
 
 const ContactPage = () => {
   return (
@@ -13,7 +14,14 @@ const ContactPage = () => {
     >
       {/* Hero */}
       <section className="pt-32 pb-8 bg-primary text-primary-foreground">
-        <div className="container text-center">
+        <div className="container">
+          <div className="mb-8">
+            <Breadcrumbs
+              items={[{ name: "Contact", href: "/contact" }]}
+              className="text-primary-foreground/60 [&_a]:text-primary-foreground/60 [&_a:hover]:text-accent [&_span.font-medium]:text-primary-foreground [&_svg]:text-primary-foreground/40"
+            />
+          </div>
+          <div className="text-center">
           <AnimatedSection animation="fade-up">
             <p className="text-accent text-xs tracking-widest uppercase mb-4">Free Consultation</p>
             <h1 className="font-serif text-4xl md:text-5xl font-medium mb-4">
@@ -24,6 +32,7 @@ const ContactPage = () => {
               including a price quote for procedure(s).
             </p>
           </AnimatedSection>
+          </div>
         </div>
       </section>
 

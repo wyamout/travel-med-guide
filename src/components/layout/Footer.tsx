@@ -8,20 +8,22 @@ const Footer = () => {
     { name: "Facelift", href: "/face/full-facelift-thailand" },
     { name: "Liposuction", href: "/body/liposuction-thailand" },
     { name: "Tummy Tuck", href: "/body/tummy-tuck-thailand" },
+    { name: "Hair Transplant", href: "/body/hair-transplant-thailand" },
   ];
 
   const locations = [
-    { name: "Bangkok", href: "/hospitals" },
-    { name: "Phuket", href: "/hospitals" },
-    { name: "Koh Samui", href: "/hospitals" },
-    { name: "Pattaya", href: "/hospitals" },
+    { name: "Bangkok Hospitals", href: "/bangkok/yanhee-international-hospital" },
+    { name: "Phuket Hospitals", href: "/phuket/phuket-hospital" },
+    { name: "Koh Samui Hospitals", href: "/samui/bangkok-hospital-samui" },
+    { name: "Pattaya Hospitals", href: "/pattaya/bangkok-hospital-pattaya" },
   ];
 
   const resources = [
     { name: "About Us", href: "/about" },
-    { name: "Surgeons", href: "/surgeons" },
+    { name: "Our Surgeons", href: "/surgeons" },
     { name: "Pricing", href: "/prices" },
     { name: "FAQs", href: "/faq" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -40,8 +42,8 @@ const Footer = () => {
               </span>
             </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed font-light">
-              Thailand's premier destination for world-class cosmetic surgery. 
-              Expert surgeons, accredited hospitals, exceptional care.
+              Thailand's premier destination for world-class cosmetic surgery.
+              Expert surgeons, accredited hospitals, exceptional care since 2003.
             </p>
           </div>
 
@@ -53,14 +55,22 @@ const Footer = () => {
             <ul className="space-y-3">
               {procedures.map((item) => (
                 <li key={item.name}>
-                  <Link 
-                    to={item.href} 
+                  <Link
+                    to={item.href}
                     className="text-primary-foreground/70 hover:text-accent transition-colors text-sm font-light"
                   >
                     {item.name}
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/procedures"
+                  className="text-accent hover:text-accent/80 transition-colors text-sm font-medium"
+                >
+                  View All Procedures →
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -72,14 +82,22 @@ const Footer = () => {
             <ul className="space-y-3 mb-8">
               {locations.map((item) => (
                 <li key={item.name}>
-                  <Link 
-                    to={item.href} 
+                  <Link
+                    to={item.href}
                     className="text-primary-foreground/70 hover:text-accent transition-colors text-sm font-light"
                   >
                     {item.name}
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  to="/hospitals"
+                  className="text-accent hover:text-accent/80 transition-colors text-sm font-medium"
+                >
+                  All Hospitals →
+                </Link>
+              </li>
             </ul>
             <h4 className="text-xs tracking-widest uppercase mb-6 text-primary-foreground/80">
               Resources
@@ -87,8 +105,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {resources.map((item) => (
                 <li key={item.name}>
-                  <Link 
-                    to={item.href} 
+                  <Link
+                    to={item.href}
                     className="text-primary-foreground/70 hover:text-accent transition-colors text-sm font-light"
                   >
                     {item.name}
@@ -103,17 +121,23 @@ const Footer = () => {
             <h4 className="text-xs tracking-widest uppercase mb-6 text-primary-foreground/80">
               Contact
             </h4>
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-3 mb-6">
               <Phone className="w-4 h-4 text-accent mt-1 shrink-0" />
               <div>
                 <p className="text-primary-foreground/70 text-xs mb-1">Thailand</p>
-                <a 
-                  href="tel:+66925590848" 
+                <a
+                  href="tel:+66925590848"
                   className="text-primary-foreground hover:text-accent transition-colors text-sm"
                 >
                   +66 92 559 0848
                 </a>
               </div>
+            </div>
+            <div className="text-xs text-primary-foreground/50 leading-relaxed">
+              <p className="mb-2">
+                Serving patients from USA, Australia, UK, Europe, and the Middle East.
+              </p>
+              <p>JCI-accredited partner hospitals across Thailand.</p>
             </div>
           </div>
         </div>
@@ -126,20 +150,20 @@ const Footer = () => {
             © {new Date().getFullYear()} Cosmetic Surgery Thailand. All rights reserved.
           </p>
           <div className="flex items-center gap-8 text-xs tracking-wider">
-            <Link 
-              to="/privacy" 
+            <Link
+              to="/privacy"
               className="text-primary-foreground/70 hover:text-accent transition-colors"
             >
               Privacy
             </Link>
-            <Link 
-              to="/faq" 
+            <Link
+              to="/faq"
               className="text-primary-foreground/70 hover:text-accent transition-colors"
             >
               FAQ
             </Link>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="text-primary-foreground/70 hover:text-accent transition-colors"
             >
               Contact

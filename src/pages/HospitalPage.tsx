@@ -4,16 +4,18 @@ import { getHospitalBySlug } from "@/data/locations";
 import { getHospitalContent } from "@/utils/hospitalContentLoader";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Phone, 
-  MapPin, 
-  Clock, 
-  Shield, 
-  Award, 
+import {
+  Phone,
+  MapPin,
+  Clock,
+  Shield,
+  Award,
   ArrowRight,
-  Check
+  Check,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import Breadcrumbs from "@/components/navigation/Breadcrumbs";
+import { HospitalSchema } from "@/components/seo/JsonLd";
 
 const HospitalPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -47,16 +49,38 @@ const HospitalPage = () => {
     "hua-hin": "Hua Hin",
   };
 
+  const breadcrumbItems = [
+    { name: "Hospitals", href: "/hospitals" },
+    { name: locationLabels[hospital.location], href: `/hospitals` },
+    { name: hospital.name, href: `/${hospital.location}/${hospital.slug}` },
+  ];
+
   return (
     <PageLayout
       title={content?.metaTitle || `${hospital.name} | Cosmetic Surgery Thailand`}
-      description={content?.metaDescription || `${hospital.shortDescription} Expert cosmetic surgeons in ${locationLabels[hospital.location]}. Free consultation available.`}
+      description={
+        content?.metaDescription ||
+        `${hospital.shortDescription} Expert cosmetic surgeons in ${locationLabels[hospital.location]}. Free consultation available.`
+      }
       keywords={`${hospital.name.toLowerCase()}, cosmetic surgery ${hospital.location}, plastic surgery ${hospital.location}`}
       canonicalUrl={`https://cosmeticsurgerythailand.com/${hospital.location}/${hospital.slug}`}
     >
+      <HospitalSchema
+        name={hospital.name}
+        description={hospital.shortDescription}
+        url={`/${hospital.location}/${hospital.slug}`}
+        location={locationLabels[hospital.location]}
+        accreditations={hospital.accreditations}
+      />
+
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary/5 via-background to-secondary/5 py-16 md:py-24">
         <div className="container">
+          {/* Breadcrumbs */}
+          <div className="mb-8">
+            <Breadcrumbs items={breadcrumbItems} />
+          </div>
+
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <div className="flex items-center gap-3 flex-wrap">
@@ -112,8 +136,8 @@ const HospitalPage = () => {
             <div className="relative">
               {content?.image ? (
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src={content.image} 
+                  <img
+                    src={content.image}
                     alt={hospital.name}
                     className="w-full h-full object-cover"
                   />
@@ -136,12 +160,13 @@ const HospitalPage = () => {
         <section className="py-16 md:py-24">
           <div className="container">
             <div className="max-w-4xl mx-auto">
-              <h2 className="section-title mb-8">
-                About {hospital.name}
-              </h2>
+              <h2 className="section-title mb-8">About {hospital.name}</h2>
               <div className="prose prose-lg max-w-none">
                 {content.paragraphs.map((paragraph, index) => (
-                  <p key={index} className="text-muted-foreground leading-relaxed mb-4">
+                  <p
+                    key={index}
+                    className="text-muted-foreground leading-relaxed mb-4"
+                  >
                     {paragraph}
                   </p>
                 ))}
@@ -188,8 +213,8 @@ const HospitalPage = () => {
             Ready to Begin Your Journey?
           </h2>
           <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-            Contact {hospital.name} for a free consultation. Our team will
-            help you plan every detail.
+            Contact {hospital.name} for a free consultation. Our team will help
+            you plan every detail.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link to="/contact">
